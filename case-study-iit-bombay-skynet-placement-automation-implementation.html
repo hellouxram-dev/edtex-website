@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IIT Bombay Day 0 scheduling case study | EDTEX</title>
+<meta name="description" content="How IIT Bombay used EDTEX Skynet Scheduler to run Day 0 interviews for 900 students and 40 companies with no schedule clashes and live interview tracking.">
+<!-- seo:start -->
+<link rel="canonical" href="https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EDTEX">
+<meta property="og:title" content="IIT Bombay Day 0 scheduling case study | EDTEX">
+<meta property="og:description" content="How IIT Bombay used EDTEX Skynet Scheduler to run Day 0 interviews for 900 students and 40 companies with no schedule clashes and live interview tracking.">
+<meta property="og:url" content="https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation">
+<meta property="og:image" content="https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IIT Bombay Day 0 scheduling case study | EDTEX">
+<meta name="twitter:description" content="How IIT Bombay used EDTEX Skynet Scheduler to run Day 0 interviews for 900 students and 40 companies with no schedule clashes and live interview tracking.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation#webpage",
+   "url": "https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation",
+   "name": "IIT Bombay Day 0 scheduling case study | EDTEX",
+   "description": "How IIT Bombay used EDTEX Skynet Scheduler to run Day 0 interviews for 900 students and 40 companies with no schedule clashes and live interview tracking.",
+   "isPartOf": {
+    "@id": "https://www.edtex.in/#website"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.edtex.in/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case studies",
+      "item": "https://www.edtex.in/case-studies"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IIT Bombay Day 0 scheduling case study",
+      "item": "https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "Article",
+   "headline": "How IIT Bombay ran Day 0 interviews for 900 students and 40 companies without a schedule clash",
+   "description": "How IIT Bombay used EDTEX Skynet Scheduler to run Day 0 interviews for 900 students and 40 companies with no schedule clashes and live interview tracking.",
+   "mainEntityOfPage": {
+    "@id": "https://www.edtex.in/case-studies/iit-bombay-skynet-placement-automation-implementation#webpage"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "image": "https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png",
+   "author": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "about": {
+    "@type": "EducationalOrganization",
+    "name": "Indian Institute of Technology Bombay"
+   }
+  }
+ ]
+}
+</script>
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+@media (min-width:1181px){.cs-inst{grid-template-columns:2.2fr 1.4fr 1.6fr 1.6fr 1fr}}
+</style>
+</head>
+<body data-section="customers">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX home"></a>
+    <nav aria-label="Main">
+      <ul class="desktop">
+        <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+        <li class="dd" data-nav-group="platform"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-platform" data-nav="platform">Platform<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-platform"><li class="dd-h">Registro, for programme offices</li><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li class="dd-h">Skynet, for placement offices</li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li class="dd-h">Services</li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+        <li class="dd" data-nav-group="customers"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-customers" data-nav="customers">Customers<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-customers"><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+        <li class="dd" data-nav-group="resources"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-resources" data-nav="resources">Resources<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-resources"><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+        <li class="dd" data-nav-group="company"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-company" data-nav="company">Company<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-company"><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="request-a-demo.html">Request a demo</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+      <li class="m-grp"><p>Platform</p><ul><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+      <li class="m-grp"><p>Customers</p><ul><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+      <li class="m-grp"><p>Resources</p><ul><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+      <li class="m-grp"><p>Company</p><ul><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      <li><a href="request-a-demo.html">Request a demo</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+
+<section class="cs-hero" aria-labelledby="h-cs">
+  <div class="wrap">
+    <p class="cs-crumb"><a href="case-studies.html">Case studies</a> &nbsp;/&nbsp; IIT Bombay</p>
+    <div class="cs-hero-grid">
+      <div>
+        <p class="cs-kicker"><img src="assets/logos/iitb.png" alt="">Case study: Skynet Scheduler</p>
+        <h1 id="h-cs">How IIT Bombay ran Day 0 interviews for 900 students and 40 companies without a schedule clash</h1>
+      </div>
+      <p class="lede">IIT Bombay uses Skynet Scheduler to run Day 0 of its placement season: clash-free interview schedules, live tracking of every interview, and 200 volunteers deployed where they are needed.</p>
+    </div>
+    <dl class="cs-inst">
+      <div><dt>Institution</dt><dd>Indian Institute of Technology Bombay</dd></div>
+      <div><dt>Location</dt><dd>Mumbai, Maharashtra</dd></div>
+      <div><dt>Used for</dt><dd>Day 0 placement interviews</dd></div>
+      <div><dt>Solution</dt><dd>Skynet Scheduler</dd></div>
+      <div><dt>Live since</dt><dd>2020</dd></div>
+    </dl>
+    <p class="cs-byline">5 minute read<span aria-hidden="true"></span>Last updated November 2026<span aria-hidden="true"></span><button type="button" class="cs-print" onclick="window.print()">Save as PDF</button></p>
+  </div>
+</section>
+
+<div class="cs-banner">
+  <div class="wrap">
+    <figure><img src="assets/case-studies/iitb-wide.jpg" width="2000" height="848" alt="IIT Bombay campus"></figure>
+  </div>
+</div>
+
+<section class="cs-results" aria-labelledby="h-res">
+  <div class="wrap">
+    <h2 id="h-res" class="vh">Results</h2>
+    <div class="cs-stats">
+      <div><b>900<a class="fn" href="#note-1" aria-label="Note 1">1</a></b><span>students interviewed on Day 0 with no schedule clashes</span></div>
+      <div><b>40<a class="fn" href="#note-2" aria-label="Note 2">2</a></b><span>companies at once, with shortlists of 40 to 500 students each</span></div>
+      <div><b>200<a class="fn" href="#note-3" aria-label="Note 3">3</a></b><span>volunteers coordinated and deployed through Skynet</span></div>
+      <div><b>0<a class="fn" href="#note-4" aria-label="Note 4">4</a></b><span>interview schedule clashes on Day 0 after implementation</span></div>
+    </div>
+
+    <div class="cs-brief" aria-label="In brief">
+      <div><h3>The challenge</h3><p>Scheduling 40 companies, about 900 students and 200 volunteers on one day by hand, with no live view of interview status.</p></div>
+      <div><h3>What EDTEX did</h3><p>Deployed Skynet Scheduler for clash-free scheduling, live changes at company and panel level, and real-time interview tracking.</p></div>
+      <div><h3>The outcome</h3><p>Day 0 ran with zero schedule clashes and volunteers deployed across every interview station.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-body" aria-label="Case study">
+  <div class="wrap cs-layout">
+
+    <aside class="cs-toc" aria-label="Key facts and contents">
+      <div class="cs-toc-sticky">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#challenge">The challenge</a></li>
+            <li><a href="#pain-points">What the placement cell was up against</a></li>
+            <li><a href="#solution">How Skynet Scheduler runs Day 0</a></li>
+            <li><a href="#what-changed">Before and after</a></li>
+            <li><a href="#outcomes">Day 0 with Skynet Scheduler</a></li>
+            <li><a href="#notes">Notes on the figures</a></li>
+          </ol>
+        </nav>
+      </div>
+    </aside>
+
+    <article class="cs-article">
+      <section id="overview" aria-labelledby="h-ov">
+        <h2 id="h-ov">Overview</h2>
+        <p>IIT Bombay deployed Skynet Scheduler to run Day 0 of its placement season, managing 900 students, 40 companies and 200 volunteers in real time with no interview clashes.</p>
+        <p>Day 0 is one of the most demanding days in campus recruitment: hundreds of students interviewed at the same time by dozens of companies, with shortlists of 40 to 500 candidates per company. Skynet Scheduler brings clash-free schedules, real-time tracking of interview status and volunteer deployment onto one platform.</p>
+        <p class="cs-xlink">More on the product: <a href="product-skynet-scheduler.html">Skynet Scheduler</a> and <a href="product-skynet-placement-automation.html">Skynet Placement Automation</a>.</p>
+      </section>
+
+      <section id="challenge" aria-labelledby="h-ch">
+        <h2 id="h-ch">900 students, 40 companies, one day</h2>
+        <p>Coordinating Day 0 by hand had always been a large task for the placement cell. Up to 40 companies held interviews for shortlists of 40 to 500 students, and about 900 students had to be interviewed in a single day, so the risk of clashes and missed interviews was high.</p>
+        <p>Alongside the schedule, 200 volunteers had to be deployed and managed at the same time, with no single system to do it.</p>
+      </section>
+
+      <section id="pain-points" aria-labelledby="h-pp">
+        <h2 id="h-pp">What the placement cell was up against</h2>
+        <ul class="cs-issues">
+          <li>Schedules built by hand across 40 companies and 900 students, leading to interview clashes</li>
+          <li>No automatic way to account for student preferences and shortlist load</li>
+          <li>200 volunteers deployed without optimisation, leaving gaps and confusing students</li>
+          <li>No real-time view of interview status or student progress during the day</li>
+          <li>Last-minute changes unmanageable without a way to adjust schedules live</li>
+        </ul>
+      </section>
+
+      <section id="solution" aria-labelledby="h-so">
+        <h2 id="h-so">How Skynet Scheduler runs Day 0</h2>
+        <p>Skynet Scheduler handles scheduling, live changes, interview tracking and volunteer deployment for Day 0 on one platform.</p>
+        <div class="cs-caps">
+          <div><h3>Clash-free scheduling</h3><p>Matching algorithms generate schedules with no overlaps, taking account of student preferences and each company’s shortlist load.</p></div>
+          <div><h3>Live schedule changes</h3><p>Controls at company and panel level allow adjustments throughout Day 0.</p></div>
+          <div><h3>Real-time interview tracking</h3><p>Live status for every student and interview across all companies through the day.</p></div>
+          <div><h3>Volunteer coordination</h3><p>Volunteers deployed across all interview stations, reducing waiting and confusion.</p></div>
+        </div>
+
+      </section>
+
+      <section id="what-changed" aria-labelledby="h-wc">
+        <h2 id="h-wc">Before and after</h2>
+        <table class="cs-compare">
+          <caption>Before and after</caption>
+          <thead><tr><th scope="col">Area</th><th scope="col">Before</th><th scope="col">With Skynet Scheduler</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Schedules</th><td data-label="Before">Built by hand; clashes across 40 companies</td><td class="after" data-label="With Skynet Scheduler">Clash-free, accounting for preferences and shortlist load</td></tr>
+            <tr><th scope="row">Changes on the day</th><td data-label="Before">Last-minute changes unmanageable</td><td class="after" data-label="With Skynet Scheduler">Live adjustments at company and panel level</td></tr>
+            <tr><th scope="row">Interview status</th><td data-label="Before">No real-time visibility</td><td class="after" data-label="With Skynet Scheduler">Live status for every student and interview</td></tr>
+            <tr><th scope="row">Volunteers</th><td data-label="Before">Deployed without optimisation</td><td class="after" data-label="With Skynet Scheduler">Deployment managed across interview stations</td></tr>
+            <tr><th scope="row">Schedule clashes</th><td data-label="Before">A significant risk</td><td class="after" data-label="With Skynet Scheduler">None on Day 0</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="outcomes" aria-labelledby="h-out">
+        <h2 id="h-out">Day 0 with Skynet Scheduler</h2>
+        <div class="cs-groups">
+          <div>
+            <h3>For the placement cell</h3>
+            <ul class="cs-wins">
+              <li>40 companies managed at once, without conflict</li>
+              <li>Real-time tracking across the whole operation</li>
+              <li>Live adjustments at company and panel level</li>
+            </ul>
+          </div>
+          <div>
+            <h3>For students</h3>
+            <ul class="cs-wins">
+              <li>900 students interviewed with no schedule clashes</li>
+              <li>Less waiting and confusion at interview stations</li>
+            </ul>
+          </div>
+          <div>
+            <h3>For recruiters and volunteers</h3>
+            <ul class="cs-wins">
+              <li>Shortlists of 40 to 500 handled without conflict</li>
+              <li>200 volunteers deployed through one system</li>
+              <li>Very positive feedback from students and recruiters</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes" class="cs-notes" aria-labelledby="h-notes">
+        <h2 id="h-notes">Notes on the figures</h2>
+        <ol>
+          <li id="note-1">Students interviewed on Day 0. <span class="todo">Source and comparison period to be added.</span></li>
+          <li id="note-2">Companies interviewing on Day 0 and the range of their shortlists. <span class="todo">Source and comparison period to be added.</span></li>
+          <li id="note-3">Volunteers deployed on Day 0. <span class="todo">Source and comparison period to be added.</span></li>
+          <li id="note-4">Schedule clashes on Day 0 after implementation. The live page title refers to virtual and hybrid placements since 2020 and to Round 1; the year of these Day 0 figures is not stated. <span class="todo">To be confirmed with IIT Bombay.</span></li>
+        </ol>
+      </section>
+    </article>
+  </div>
+</section>
+
+<section class="cs-more" aria-labelledby="h-more">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-more">More case studies</h2>
+      <p>How other institutions implemented EDTEX.</p>
+    </div>
+    <ul class="case-cards" style="grid-template-columns:repeat(3,1fr)">
+      <li><a href="case-study-iim-trichy-skynet-placement-automation-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/iim-trichy.jpg" width="900" height="507" alt="IIM Trichy campus" loading="lazy"></div>
+        <span class="prod">Skynet, placements</span>
+        <h3 class="inst">IIM Trichy</h3>
+        <p>The placement lifecycle automated across 12+ workflows, from CVs to dream offers.</p>
+        <span class="go">Read case study</span></a></li>
+      <li><a href="case-study-isb-hyderabad-skynet-placement-automation-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/isb.jpg" width="900" height="507" alt="Indian School of Business campus" loading="lazy"></div>
+        <span class="prod">Skynet, placements</span>
+        <h3 class="inst">Indian School of Business</h3>
+        <p>A legacy placements platform replaced across two campuses, integrated with Salesforce.</p>
+        <span class="go">Read case study</span></a></li>
+      <li><a href="case-study-iim-raipur-registro-course-bidding-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/iim-raipur.jpg" width="900" height="507" alt="IIM Raipur campus" loading="lazy"></div>
+        <span class="prod">Registro, course bidding</span>
+        <h3 class="inst">IIM Raipur</h3>
+        <p>Multi-term elective bidding, with clash-free timetables generated before bidding opens.</p>
+        <span class="go">Read case study</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cs-cta" aria-labelledby="h-close">
+  <div class="wrap cs-cta-grid">
+    <div>
+      <h2 id="h-close">See how placement season would run at your institution</h2>
+      <p>The first call is a 30 to 45 minute discovery session. We map how your placement process works today, then prepare a demonstration around your own workflows.</p>
+      <ol class="cs-cta-steps">
+        <li><b>Discovery call</b><span>30 to 45 minutes</span></li>
+        <li><b>Tailored demonstration</b><span>Built around your process</span></li>
+        <li><b>Pilot and deploy</b><span>Scoped, with training</span></li>
+      </ol>
+    </div>
+    <div class="cs-cta-card">
+      <div class="cs-cta-person"><img src="assets/images/arun-portrait.jpg" alt="" width="56" height="56"><p>You will speak with<br><b>Arun Korupolu</b>Co-founder &amp; CRO</p></div>
+      <a class="btn btn-light cs-cta-btn" href="request-a-demo.html">Request a demo</a>
+      <p class="cs-cta-note">We reply within one business day.<br>Prefer email? <a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX"></div>
+        <p>Academic operations software for business schools, law schools and universities. Hyderabad, India.</p>
+        <p style="margin-top:10px"><a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="product-course-bidding.html">Elective course bidding</a></li>
+          <li><a href="product-registro-timetable-automation.html">Timetable automation</a></li>
+          <li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li>
+          <li><a href="product-registro-academic-erp.html">Academic ERP</a></li>
+          <li><a href="product-skynet-placement-automation.html">Placement operations</a></li>
+          <li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li>
+          <li><a href="consulting.html">Consulting and custom AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Customers</h4>
+        <ul>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a href="customer-stories.html">Customer stories</a></li>
+          <li><a href="why-edtex.html">Why EDTEX</a></li>
+          <li><a href="request-a-demo.html">Request a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Guides and videos</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="research-and-development.html">Research and development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="newsroom.html">Newsroom</a></li>
+          <li><a href="request-a-demo.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+          <li><a href="terms-conditions.html">Terms and conditions</a></li>
+          <li><a href="cookie-policy.html">Cookie policy</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-affil affil-strip" aria-label="Affiliations and compliance">
+      <div class="as-row">
+    <div class="as-group">
+      <p class="as-label">Memberships</p>
+      <ul>
+          <li><img src="assets/affiliations/aacsb.png" alt="AACSB Business Education Alliance member" title="AACSB Business Education Alliance member"></li>
+          <li><img src="assets/affiliations/csea.png" alt="Career Services &amp; Employer Alliance" title="Career Services &amp; Employer Alliance"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Supported by</p>
+      <ul>
+          <li><img src="assets/affiliations/dpiit.png" alt="DPIIT-recognised startup, Startup India" title="DPIIT-recognised startup, Startup India"></li>
+          <li><img src="assets/affiliations/microsoft-founders-hub.png" alt="Microsoft for Startups Founders Hub" title="Microsoft for Startups Founders Hub"></li>
+          <li><img src="assets/affiliations/google-startups.png" alt="Google for Startups" title="Google for Startups"></li>
+          <li><img src="assets/affiliations/iprs.png" alt="IPRS, Indian Placement Reporting Standards" title="IPRS, Indian Placement Reporting Standards"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Data protection</p>
+      <ul>
+          <li class="round"><img src="assets/affiliations/dpdp.png" alt="Aligned with India's DPDP Act, 2023" title="Aligned with India's DPDP Act, 2023"></li>
+          <li class="round"><img src="assets/affiliations/gdpr.png" alt="Aligned with EU GDPR" title="Aligned with EU GDPR"></li>
+          <li class="round"><img src="assets/affiliations/soc2.png" alt="AICPA SOC 2" title="AICPA SOC 2"></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 EDTEX. Winspire Educational Solutions Private Limited. CIN U74999TG2016PTC110546.</span>
+      <span>Aligned with India's DPDP Act 2023 and EU GDPR</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.cs-toc nav a'));
+  var secs=links.map(function(l){return document.querySelector(l.getAttribute('href'));}).filter(Boolean);
+  var ticking=false;
+  function sync(){
+    ticking=false;
+    var line=window.innerHeight*0.3, cur=secs[0];
+    secs.forEach(function(sec){if(sec.getBoundingClientRect().top<=line)cur=sec;});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){
+      var art=document.querySelector('.cs-article');
+      if(art&&art.getBoundingClientRect().bottom<=window.innerHeight)cur=secs[secs.length-1];
+    }
+    links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+(cur&&cur.id)?'true':'false');});
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(sync);}},{passive:true});
+  window.addEventListener('resize',sync);
+  links.forEach(function(l){l.addEventListener('click',function(){setTimeout(sync,600);});});
+  sync();
+})();
+</script>
+</body>
+</html>

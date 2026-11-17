@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is timetable scheduling automation? | EDTEX</title>
+<meta name="description" content="Timetable scheduling automation is software that builds clash-free schedules from constraints: the inputs, the engine, four approaches and IIM Calcutta results.">
+<!-- seo:start -->
+<link rel="canonical" href="https://www.edtex.in/blogs/what-is-timetable-scheduling-automation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EDTEX">
+<meta property="og:title" content="What is timetable scheduling automation? | EDTEX">
+<meta property="og:description" content="Timetable scheduling automation is software that builds clash-free schedules from constraints: the inputs, the engine, four approaches and IIM Calcutta results.">
+<meta property="og:url" content="https://www.edtex.in/blogs/what-is-timetable-scheduling-automation">
+<meta property="og:image" content="https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What is timetable scheduling automation? | EDTEX">
+<meta name="twitter:description" content="Timetable scheduling automation is software that builds clash-free schedules from constraints: the inputs, the engine, four approaches and IIM Calcutta results.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.edtex.in/blogs/what-is-timetable-scheduling-automation#webpage",
+   "url": "https://www.edtex.in/blogs/what-is-timetable-scheduling-automation",
+   "name": "What is timetable scheduling automation? | EDTEX",
+   "description": "Timetable scheduling automation is software that builds clash-free schedules from constraints: the inputs, the engine, four approaches and IIM Calcutta results.",
+   "isPartOf": {
+    "@id": "https://www.edtex.in/#website"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.edtex.in/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://www.edtex.in/insights"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is timetable scheduling automation and how does it work?",
+      "item": "https://www.edtex.in/blogs/what-is-timetable-scheduling-automation"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "Article",
+   "headline": "What is timetable scheduling automation and how does it work?",
+   "description": "Timetable scheduling automation is software that builds clash-free schedules from constraints: the inputs, the engine, four approaches and IIM Calcutta results.",
+   "mainEntityOfPage": {
+    "@id": "https://www.edtex.in/blogs/what-is-timetable-scheduling-automation#webpage"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "image": "https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png",
+   "author": {
+    "@type": "Person",
+    "name": "Arun Korupolu"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is timetable scheduling automation the same as AI timetabling?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Broadly, yes. \"AI timetabling\" usually refers to the optimisation techniques inside the engine, such as integer programming or genetic algorithms, that search for the best schedule within the institution's constraints."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between hard and soft constraints?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hard constraints must never be broken, such as no room double-booking. Soft constraints are preferences, such as a faculty member's preferred teaching window, which the system satisfies wherever it can."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take to generate a timetable?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once the data is ready, a constraint-based system generates a conflict-free schedule in minutes. Implementing the system for a single process typically takes a few weeks."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can administrators still edit an automated timetable?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The system flags remaining violations and edge cases, and administrators can make manual changes to handle situations on the ground."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work for multi-programme universities?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Registro Timetable Automation honours room, faculty and credit constraints across multi-programme universities, and is used at IIM Bangalore, IIM Kozhikode, IIM Lucknow, KJ Somaiya, TAPMI Manipal and TAPMI Bengaluru."
+     }
+    }
+   ],
+   "@id": "https://www.edtex.in/blogs/what-is-timetable-scheduling-automation#faq"
+  }
+ ]
+}
+</script>
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+
+.bl-hero h1{font-size:clamp(2rem,3.6vw,3rem);line-height:1.1;letter-spacing:-.025em;max-width:22ch}
+.bl-hero .page-hero-grid{align-items:end}
+.cs-body{padding-top:72px}
+.prose section{scroll-margin-top:calc(var(--nav-h) + 24px)}
+.prose section > h2{margin-top:72px}
+.bl-intro > :first-child{margin-top:0}
+.bl-short{border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);padding:24px 0;margin:0 0 32px}
+.bl-short p{font-size:1.12rem;line-height:1.7;color:var(--ink)}
+.prose h3{color:var(--ink)}
+.prose .cs-quote{margin:40px 0}
+.prose .cs-quote blockquote{border:0;margin:0;padding:0;font-size:clamp(1.2rem,2vw,1.45rem);line-height:1.5}
+.prose .cs-quote figcaption{font-size:1rem}
+.prose .cs-quote figcaption b{font-size:1rem}
+.bl-faq{margin:8px 0 0;border-top:1px solid var(--ink)}
+.bl-faq details{border-bottom:1px solid var(--rule)}
+.bl-faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-weight:600;color:var(--ink);font-size:1.08rem;line-height:1.5}
+.bl-faq summary::-webkit-details-marker{display:none}
+.bl-faq summary::after{content:"";position:absolute;right:6px;top:50%;width:11px;height:11px;border-right:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.bl-faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.bl-faq summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.bl-ans{padding:0 0 22px}
+.bl-ans p,.bl-ans li{color:var(--text)}
+.bl-faq + h3,.bl-faq + p{margin-top:28px}
+.bl-note{margin:32px 0;padding:4px 0 4px 24px;border-left:3px solid var(--accent)}
+.bl-note .bl-note-h{font-weight:600;color:var(--ink);margin-bottom:6px}
+.bl-stats{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin:28px 0;border-top:1px solid var(--ink)}
+.bl-stats div{padding:20px 0;border-bottom:1px solid var(--rule)}
+.bl-stats dt{font-family:var(--serif);font-weight:500;font-size:2rem;letter-spacing:-.02em;color:var(--ink);line-height:1.1}
+.bl-stats dd{margin:6px 0 0;color:var(--muted);font-size:1rem;line-height:1.5}
+.bl-close{margin-top:64px}
+.bl-also{border-top:1px solid var(--ink);padding-top:20px;margin-bottom:28px}
+.bl-also > p{font-weight:600;color:var(--ink);font-size:1rem}
+.bl-also ul{list-style:none;padding:0;margin:8px 0 0}
+.bl-also li{font-size:1rem}
+.bl-also li span{color:var(--muted)}
+.bl-related{padding:104px 0;border-top:1px solid var(--rule)}
+.bl-related .in-grid{margin-top:8px}
+@media (max-width:600px){.bl-stats{grid-template-columns:1fr}.cs-body{padding-top:48px}.bl-related{padding:72px 0}}
+@media print{
+  .page-hero{background:#fff!important;color:#000;padding:0 0 24px}
+  .page-hero *,.page-hero .crumb a{color:#000!important}
+  .bl-related,.bl-also{display:none!important}
+  .prose{max-width:none!important}
+  details{border:0}
+  details > summary::after{display:none}
+  details:not([open]) > .bl-ans{display:block}
+}
+
+</style>
+</head>
+<body data-section="resources">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX home"></a>
+    <nav aria-label="Main">
+      <ul class="desktop">
+        <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+        <li class="dd" data-nav-group="platform"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-platform" data-nav="platform">Platform<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-platform"><li class="dd-h">Registro, for programme offices</li><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li class="dd-h">Skynet, for placement offices</li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li class="dd-h">Services</li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+        <li class="dd" data-nav-group="customers"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-customers" data-nav="customers">Customers<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-customers"><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+        <li class="dd" data-nav-group="resources"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-resources" data-nav="resources">Resources<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-resources"><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+        <li class="dd" data-nav-group="company"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-company" data-nav="company">Company<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-company"><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="request-a-demo.html">Request a demo</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+      <li class="m-grp"><p>Platform</p><ul><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+      <li class="m-grp"><p>Customers</p><ul><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+      <li class="m-grp"><p>Resources</p><ul><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+      <li class="m-grp"><p>Company</p><ul><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      <li><a href="request-a-demo.html">Request a demo</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero bl-hero" aria-labelledby="h-title">
+  <div class="wrap">
+    <p class="crumb"><a href="insights.html">Resources</a> &nbsp;/&nbsp; Timetabling</p>
+    <div class="page-hero-grid">
+      <div>
+        <p class="kicker">Timetabling</p>
+        <h1 id="h-title">What is timetable scheduling automation and how does it work?</h1>
+      </div>
+      <p class="lede">Timetable scheduling automation is the use of software and optimisation algorithms to generate, manage and adjust academic timetables automatically.</p>
+    </div>
+    <p class="cs-byline">By Arun Korupolu<span aria-hidden="true"></span><button type="button" class="cs-print" onclick="window.print()">Save as PDF</button></p>
+  </div>
+</section>
+
+<section class="cs-body" aria-label="Article">
+  <div class="wrap cs-layout">
+    <aside class="cs-toc" aria-label="Contents">
+      <div class="cs-toc-sticky">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#problem-timetable-automation-solve">What problem does timetable automation solve?</a></li><li><a href="#goes-into-automated-timetable">What goes into an automated timetable?</a></li><li><a href="#hard-soft-constraints">What are hard and soft constraints?</a></li><li><a href="#scheduling-engine-find-timetable">How does the scheduling engine find a timetable?</a></li><li><a href="#types-timetable-automation-there">What types of timetable automation are there?</a></li><li><a href="#results-timetable-automation-deliver">What results does timetable automation deliver?</a></li><li><a href="#frequently-asked-questions">Frequently asked questions</a></li><li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </nav>
+      </div>
+    </aside>
+    <article class="prose" style="max-width:740px">
+<div class="bl-intro"><div class="bl-short"><p><strong>The short answer:</strong> timetable scheduling automation is the use of software and optimisation algorithms to generate, manage and adjust academic timetables automatically. Instead of an administrator assigning every course to a room, a faculty member and a time slot by hand, the system takes those resources and the institution's rules as inputs and searches for a conflict-free schedule that meets every hard rule and as many preferences as possible. At IIM Calcutta, this approach cut the time spent creating timetables by 70%.</p></div>
+<p>This article is the definition: what timetable automation is, what goes into it, how the engine works and the main types of approach. For the business case, read our companion piece on <a href="blog-is-the-university-timetable-automated.html">the benefits of automating university timetable generation</a>.</p></div>
+<section id="problem-timetable-automation-solve" aria-labelledby="h-problem-timetable-automation-solve">
+<h2 id="h-problem-timetable-automation-solve">What problem does timetable automation solve?</h2>
+<p>Before automation, academic administrators spent weeks, sometimes months, manually assigning lectures to rooms, balancing faculty workloads and checking for booking conflicts. A single change could cascade into dozens of knock-on adjustments across the whole schedule.</p>
+<p>That makes timetabling far more than an administrative inconvenience. A poorly built timetable reaches every stakeholder: students who cannot take the electives they chose, faculty given slots they cannot teach, and classrooms that sit empty while others are double-booked.</p>
+<p>Timetable scheduling automation replaces the manual process with software that works through a solution space no human team could explore by hand, and surfaces the most efficient conflict-free arrangement. Registro, EDTEX's timetabling system, generates conflict-free schedules in minutes, not weeks.</p>
+</section>
+<section id="goes-into-automated-timetable" aria-labelledby="h-goes-into-automated-timetable">
+<h2 id="h-goes-into-automated-timetable">What goes into an automated timetable?</h2>
+<p>Every timetabling engine starts with a resource database: structured data about what has to be scheduled and what it can be scheduled into. The inputs fall into five groups:</p>
+<ul><li><strong>Courses and demand:</strong> course offerings, sections, credits and expected or actual enrolment.</li><li><strong>Faculty:</strong> who teaches what, when they are available and their preferred teaching windows.</li><li><strong>Rooms:</strong> classrooms, capacities and equipment.</li><li><strong>The calendar:</strong> active weekdays, class time slots and holidays.</li><li><strong>Student choices:</strong> registrations or bidding results, and which courses students tend to take together.</li></ul>
+<p>The quality of the output depends on the quality of these inputs. At IIM Calcutta, data quality was the main implementation challenge: demand estimates and faculty preferences had to be cleaned and verified before the system could perform at its best.</p>
+</section>
+<section id="hard-soft-constraints" aria-labelledby="h-hard-soft-constraints">
+<h2 id="h-hard-soft-constraints">What are hard and soft constraints?</h2>
+<p>A constraint engine turns the institution's rules into two kinds of instruction.</p>
+<h3>Hard constraints</h3>
+<p>These are non-negotiable. A room cannot be double-booked. A faculty member cannot teach two sections at once. A class cannot go into a room smaller than its enrolment. Two courses that many students take together cannot share a slot. A timetable that breaks a hard constraint is not usable.</p>
+<h3>Soft constraints</h3>
+<p>These are preferred outcomes. A professor would rather teach in the mornings. A course's sessions should be spread across the week. A popular elective should sit in a slot where most students are free. The system tries to satisfy as many soft constraints as it can, and trades them off against each other when it cannot satisfy them all.</p>
+<p>The tool that links the two is the <strong>course clash matrix</strong>: a record of which courses are frequently taken together, so the scheduler knows which pairs must never overlap. IIM Calcutta's system is built on three data sources, demand estimation, a clash matrix and faculty preferences, coordinated by a constraint-based optimisation engine. It resolved 95% of potential scheduling conflicts and incorporated 85% of faculty preferences into the final schedule. <a href="case-study-iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html">Read the IIM Calcutta case study</a>.</p>
+</section>
+<section id="scheduling-engine-find-timetable" aria-labelledby="h-scheduling-engine-find-timetable">
+<h2 id="h-scheduling-engine-find-timetable">How does the scheduling engine find a timetable?</h2>
+<h3>The optimisation algorithm</h3>
+<p>The engine searches the space of possible timetables for the best one. Common techniques include:</p>
+<ul><li><strong>Integer linear programming</strong>, which expresses every possible assignment as a variable and every rule as an equation, then solves for the best overall score.</li><li><strong>Graph colouring</strong>, which treats courses as points, clashes as lines between them and time slots as colours, so no two connected courses get the same colour.</li><li><strong>Genetic algorithms and simulated annealing</strong>, which start from a candidate timetable and improve it step by step.</li></ul>
+<p>In practice, systems combine methods. IIM Lucknow's engine uses integer programming and greedy algorithms to balance clash minimisation, classroom utilisation, faculty preferences and course load distribution.</p>
+<h3>Conflict detection and reporting</h3>
+<p>After generation, the system flags any remaining violations so administrators can resolve edge cases themselves. At IIM Lucknow, a colour-coded dashboard lets students and administrators see conflicts before the timetable is finalised.</p>
+<h3>The integration layer</h3>
+<p>The engine connects to student information systems, HR platforms and room booking tools so data stays in step across the institution. At IIM Bangalore, teaching slots are blocked automatically in faculty Outlook calendars. <a href="case-study-iim-bangalore-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html">Read the IIM Bangalore case study</a>.</p>
+<h3>Re-scheduling</h3>
+<p>Enrolments shift and faculty availability changes. A good system adjusts the published timetable without restarting the scheduling process from scratch.</p>
+</section>
+<section id="types-timetable-automation-there" aria-labelledby="h-types-timetable-automation-there">
+<h2 id="h-types-timetable-automation-there">What types of timetable automation are there?</h2>
+<p>Institutions generally use one of four approaches, and many move through them in order.</p>
+<h3>1. Spreadsheet and rule-of-thumb methods</h3>
+<p>Not really automation, but where many programme offices start. Familiar and cheap, but every clash check is manual and every change is a rework.</p>
+<h3>2. Demand-driven scheduling before registration</h3>
+<p>The timetable is built from predicted demand, using historical enrolment data and a clash matrix, so popular courses land in suitable rooms at high-availability slots before students register. This is the IIM Calcutta model.</p>
+<h3>3. Post-registration scheduling with section shuffling</h3>
+<p>The timetable is built or refined after registration, using actual enrolments. Where a course has several sections, the system reassigns students between them to remove clashes. At IIM Lucknow, this resolved more than 90% of clashes automatically, and the number of students reporting schedule conflicts fell by 60%. <a href="case-study-iim-lucknow-2-registro-course-bidding-multiprogramme-timetabling-automation-academic-erp-implementation.html">Read the IIM Lucknow case study</a>.</p>
+<h3>4. Bidding-integrated scheduling</h3>
+<p>Elective bidding and timetabling run as one pipeline. At IIM Kozhikode, bidding outcomes feed directly into automated timetable generation, so conflicts are resolved before the schedule is published rather than discovered after bidding closes. <a href="case-study-iim-kozhikode-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html">Read the IIM Kozhikode case study</a>.</p>
+</section>
+<section id="results-timetable-automation-deliver" aria-labelledby="h-results-timetable-automation-deliver">
+<h2 id="h-results-timetable-automation-deliver">What results does timetable automation deliver?</h2>
+<p>In brief: less time spent building the timetable, far fewer clashes, better use of rooms and fairer treatment of faculty preferences. IIM Lucknow cut the time needed to finalise its timetable by 50% and improved classroom utilisation by 20%. We cover the benefits in detail, with a rollout template, in <a href="blog-is-the-university-timetable-automated.html">what are the benefits of automating university timetable generation</a>.</p>
+</section>
+<section id="frequently-asked-questions" aria-labelledby="h-frequently-asked-questions">
+<h2 id="h-frequently-asked-questions">Frequently asked questions</h2>
+<div class="bl-faq"><details class="faq"><summary>Is timetable scheduling automation the same as AI timetabling?</summary><div class="faq-a"><div class="bl-ans"><p>Broadly, yes. "AI timetabling" usually refers to the optimisation techniques inside the engine, such as integer programming or genetic algorithms, that search for the best schedule within the institution's constraints.</p></div></div></details><details class="faq"><summary>What is the difference between hard and soft constraints?</summary><div class="faq-a"><div class="bl-ans"><p>Hard constraints must never be broken, such as no room double-booking. Soft constraints are preferences, such as a faculty member's preferred teaching window, which the system satisfies wherever it can.</p></div></div></details><details class="faq"><summary>How long does it take to generate a timetable?</summary><div class="faq-a"><div class="bl-ans"><p>Once the data is ready, a constraint-based system generates a conflict-free schedule in minutes. Implementing the system for a single process typically takes a few weeks.</p></div></div></details><details class="faq"><summary>Can administrators still edit an automated timetable?</summary><div class="faq-a"><div class="bl-ans"><p>Yes. The system flags remaining violations and edge cases, and administrators can make manual changes to handle situations on the ground.</p></div></div></details><details class="faq"><summary>Does it work for multi-programme universities?</summary><div class="faq-a"><div class="bl-ans"><p>Yes. Registro Timetable Automation honours room, faculty and credit constraints across multi-programme universities, and is used at IIM Bangalore, IIM Kozhikode, IIM Lucknow, KJ Somaiya, TAPMI Manipal and TAPMI Bengaluru.</p></div></div></details></div>
+</section>
+<section id="conclusion" aria-labelledby="h-conclusion">
+<h2 id="h-conclusion">Conclusion</h2>
+<p>Timetable scheduling automation is a structural change in how institutions handle one of their most operationally complex tasks, not a marginal improvement. Done well, it removes weeks of administrative work, protects the student experience and turns the timetable from a source of friction into a dependable part of academic operations. To see how Registro would handle your timetable, write to us at <a href="mailto:registro@edtex.in">registro@edtex.in</a> or <a href="request-a-demo.html">request a demo</a>.</p>
+</section>
+<div class="bl-close"><div class="bl-also"><p>See also</p><ul><li><a href="product-registro-timetable-automation.html#video">Video: how to implement timetabling automation</a> <span>(video)</span></li><li><a href="product-registro-timetable-automation.html">Registro Timetable Automation</a> <span>(product)</span></li></ul></div></div>
+    </article>
+  </div>
+</section>
+
+<section class="bl-related" aria-labelledby="h-rel">
+  <div class="wrap">
+    <div class="head"><h2 id="h-rel">Related reading</h2><p>More from EDTEX on timetabling.</p></div>
+    <ul class="in-grid">
+      <li class="in-card"><a href="blog-is-the-university-timetable-automated.html"><div class="in-text-top"><span>Timetabling</span></div><span class="in-meta"><b>Guide</b>5 min read</span><h3>What are the benefits of automating university timetable generation?</h3><p>Timetable creation time cut by 70% at IIM Calcutta and 90%+ of clashes resolved automatically at IIM Lucknow. The benefits, inputs and rollout steps.</p><span class="in-go">Read article</span></a></li><li class="in-card"><a href="blog-what-are-the-challenges-faced-by-university-staff-due-to-the-lack-of-it-and-automation-systems-for-efficient-timetable-generation-and-management.html"><div class="in-text-top"><span>Timetabling</span></div><span class="in-meta"><b>Guide</b>6 min read</span><h3>What challenges do university staff face without timetable automation?</h3><p>Weeks of data-chasing, clash-fixing and rework, and how IIM Calcutta cut timetable creation time by 70%.</p><span class="in-go">Read article</span></a></li><li class="in-card"><a href="case-study-iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html"><div class="in-img"><img src="assets/case-studies/iimc.jpg" alt="IIM Calcutta campus" loading="lazy" width="900" height="507"></div><span class="in-meta"><b>Case study</b>IIM Calcutta</span><h3>Demand-driven timetabling with 85% of faculty preferences met</h3><span class="in-go">Read case study</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cs-cta" aria-labelledby="h-close">
+  <div class="wrap cs-cta-grid">
+    <div>
+      <h2 id="h-close">See how Registro would build your timetable</h2>
+      <p>We begin by understanding how your timetable is built today: programmes, rooms, faculty preferences and the clashes you deal with each term.</p>
+      <ol class="cs-cta-steps">
+        <li><b>Discovery call</b><span>30 to 45 minutes</span></li>
+        <li><b>Tailored demonstration</b><span>Built around your rules</span></li>
+        <li><b>Pilot and deploy</b><span>Scoped, with training</span></li>
+      </ol>
+    </div>
+    <div class="cs-cta-card">
+      <div class="cs-cta-person"><img src="assets/images/arun-portrait.jpg" alt="" width="56" height="56"><p>You will speak with<br><b>Arun Korupolu</b>Co-founder &amp; CRO</p></div>
+      <a class="btn btn-light cs-cta-btn" href="request-a-demo.html">Request a demo</a>
+      <p class="cs-cta-note">We reply within one business day.<br>Prefer email? <a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX"></div>
+        <p>Academic operations software for business schools, law schools and universities. Hyderabad, India.</p>
+        <p style="margin-top:10px"><a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="product-course-bidding.html">Elective course bidding</a></li>
+          <li><a href="product-registro-timetable-automation.html">Timetable automation</a></li>
+          <li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li>
+          <li><a href="product-registro-academic-erp.html">Academic ERP</a></li>
+          <li><a href="product-skynet-placement-automation.html">Placement operations</a></li>
+          <li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li>
+          <li><a href="consulting.html">Consulting and custom AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Customers</h4>
+        <ul>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a href="customer-stories.html">Customer stories</a></li>
+          <li><a href="why-edtex.html">Why EDTEX</a></li>
+          <li><a href="request-a-demo.html">Request a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Guides and videos</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="research-and-development.html">Research and development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="newsroom.html">Newsroom</a></li>
+          <li><a href="request-a-demo.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+          <li><a href="terms-conditions.html">Terms and conditions</a></li>
+          <li><a href="cookie-policy.html">Cookie policy</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-affil affil-strip" aria-label="Affiliations and compliance">
+      <div class="as-row">
+    <div class="as-group">
+      <p class="as-label">Memberships</p>
+      <ul>
+          <li><img src="assets/affiliations/aacsb.png" alt="AACSB Business Education Alliance member" title="AACSB Business Education Alliance member"></li>
+          <li><img src="assets/affiliations/csea.png" alt="Career Services &amp; Employer Alliance" title="Career Services &amp; Employer Alliance"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Supported by</p>
+      <ul>
+          <li><img src="assets/affiliations/dpiit.png" alt="DPIIT-recognised startup, Startup India" title="DPIIT-recognised startup, Startup India"></li>
+          <li><img src="assets/affiliations/microsoft-founders-hub.png" alt="Microsoft for Startups Founders Hub" title="Microsoft for Startups Founders Hub"></li>
+          <li><img src="assets/affiliations/google-startups.png" alt="Google for Startups" title="Google for Startups"></li>
+          <li><img src="assets/affiliations/iprs.png" alt="IPRS, Indian Placement Reporting Standards" title="IPRS, Indian Placement Reporting Standards"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Data protection</p>
+      <ul>
+          <li class="round"><img src="assets/affiliations/dpdp.png" alt="Aligned with India's DPDP Act, 2023" title="Aligned with India's DPDP Act, 2023"></li>
+          <li class="round"><img src="assets/affiliations/gdpr.png" alt="Aligned with EU GDPR" title="Aligned with EU GDPR"></li>
+          <li class="round"><img src="assets/affiliations/soc2.png" alt="AICPA SOC 2" title="AICPA SOC 2"></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 EDTEX. Winspire Educational Solutions Private Limited. CIN U74999TG2016PTC110546.</span>
+      <span>Aligned with India's DPDP Act 2023 and EU GDPR</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.cs-toc nav a'));
+  var secs=links.map(function(l){return document.querySelector(l.getAttribute('href'));}).filter(Boolean);
+  if(!secs.length)return;
+  var ticking=false;
+  function sync(){
+    ticking=false;
+    var line=window.innerHeight*0.3, cur=secs[0];
+    secs.forEach(function(sec){if(sec.getBoundingClientRect().top<=line)cur=sec;});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){
+      var art=document.querySelector('.cs-body article');
+      if(art&&art.getBoundingClientRect().bottom<=window.innerHeight)cur=secs[secs.length-1];
+    }
+    links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+(cur&&cur.id)?'true':'false');});
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(sync);}},{passive:true});
+  window.addEventListener('resize',sync);
+  links.forEach(function(l){l.addEventListener('click',function(){setTimeout(sync,600);});});
+  window.addEventListener('beforeprint',function(){[].forEach.call(document.querySelectorAll('.prose details'),function(d){d.setAttribute('open','');});});
+  sync();
+})();
+</script>
+</body>
+</html>

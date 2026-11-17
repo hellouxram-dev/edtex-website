@@ -1,0 +1,24 @@
+old_path,new_path,reason
+/testimonials,/customer-stories,97% duplicate of customer stories
+/solutions,/why-edtex,merged: problem-led pitch page (solutions + why EDTEX)
+/blogs,/insights,one resources hub instead of three listings
+/videos,/insights,one resources hub instead of three listings
+/primers,/products,primer paragraphs now live on each product page
+/videos/story-of-edtex,/about-us,video embedded on About us
+/videos/timetabling-automation,/products/registro-timetable-automation,thin video page: embedded on product page
+/videos/course-bidding-system,/products/course-bidding,thin video page: embedded on product page
+/videos/student-exchange-system,/products/registro-academic-exchange-automation,thin video page: embedded on product page
+/videos/registro-academic-operations-automation,/products/registro-academic-erp,thin video page: embedded on product page
+/videos/ai-answer-engines,/research-and-development,thin video page: embedded on R&D
+/blogs/how-do-universities-automate-timetable-management,/blogs/is-the-university-timetable-automated,same topic (benefits of timetable automation); unsourced figures dropped
+/blogs/from-chaos-to-choice-making-the-case-for-course-bidding-systems-in-business-schools,/blogs/why-course-bidding-processes-are-more-relevant-in-business-schools-and-law-schools,same intent: why schools use course bidding
+/blogs/what-are-the-5-key-painpoints-students-face-while-registering-for-courses-in-universities,/blogs/what-challenges-do-students-face-in-course-bidding-and-enrollment-at-universities-and-business-schools-that-lack-adequate-digital-infrastructure,same intent: student registration problems
+/blogs/faqs-on-course-bidding-process-using-registro-platform,/products/course-bidding,product FAQs belong on the product page
+/blogs/skynet-placement-automation-platform-key-advantages,/products/skynet-placement-automation,product pitch belongs on the product page
+/blogs/the-digital-renaissance-how-universities-are-being-transformed-through-technology,/blogs/academic-operation-process-automation-in-universities,same intent: why automate academic operations
+/blogs/the-digital-revolution-in-higher-ed-a-student-success-story,/blogs/academic-operation-process-automation-in-universities,same intent: why automate academic operations
+/careers,/about-us,careers section removed
+/careers/product-designer-saas-erp-applications,/about-us,careers section removed
+/careers/product-manager,/about-us,careers section removed
+/careers/full-stack-engineer-in-java-stack---interns-project-work-with-and-wo-ppo,/about-us,careers section removed
+/careers/international-student-market-researcher---gtm-project,/about-us,careers section removed

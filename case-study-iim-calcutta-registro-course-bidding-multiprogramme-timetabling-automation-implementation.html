@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IIM Calcutta timetabling case study | EDTEX</title>
+<meta name="description" content="IIM Calcutta timetabling on Registro: demand estimates, a course clash matrix and faculty preferences cut timetable creation time by 70%, from weeks to days.">
+<!-- seo:start -->
+<link rel="canonical" href="https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EDTEX">
+<meta property="og:title" content="IIM Calcutta timetabling case study | EDTEX">
+<meta property="og:description" content="IIM Calcutta timetabling on Registro: demand estimates, a course clash matrix and faculty preferences cut timetable creation time by 70%, from weeks to days.">
+<meta property="og:url" content="https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation">
+<meta property="og:image" content="https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IIM Calcutta timetabling case study | EDTEX">
+<meta name="twitter:description" content="IIM Calcutta timetabling on Registro: demand estimates, a course clash matrix and faculty preferences cut timetable creation time by 70%, from weeks to days.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation#webpage",
+   "url": "https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation",
+   "name": "IIM Calcutta timetabling case study | EDTEX",
+   "description": "IIM Calcutta timetabling on Registro: demand estimates, a course clash matrix and faculty preferences cut timetable creation time by 70%, from weeks to days.",
+   "isPartOf": {
+    "@id": "https://www.edtex.in/#website"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.edtex.in/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Case studies",
+      "item": "https://www.edtex.in/case-studies"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "IIM Calcutta timetabling: how Registro cut timetable creation time by 70%",
+      "item": "https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "Article",
+   "headline": "IIM Calcutta timetabling: how Registro cut timetable creation time by 70%",
+   "description": "IIM Calcutta timetabling on Registro: demand estimates, a course clash matrix and faculty preferences cut timetable creation time by 70%, from weeks to days.",
+   "mainEntityOfPage": {
+    "@id": "https://www.edtex.in/case-studies/iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation#webpage"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "image": "https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png",
+   "author": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "about": {
+    "@type": "EducationalOrganization",
+    "name": "Indian Institute of Management Calcutta"
+   }
+  }
+ ]
+}
+</script>
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+
+.cs-cycle.n3 ol{grid-template-columns:repeat(3,1fr)}
+.cs-cycle.n4 ol{grid-template-columns:repeat(4,1fr)}
+.cs-stats.n3{grid-template-columns:repeat(3,1fr)}
+.cs-sub{margin-top:40px;padding-top:24px;border-top:1px solid var(--rule)}
+.cs-sub h3{font-size:1.1rem;letter-spacing:-.01em;margin-bottom:8px}
+@media (max-width:980px){.cs-cycle.n3 ol,.cs-cycle.n4 ol{grid-template-columns:1fr}.cs-stats.n3{grid-template-columns:1fr 1fr}}
+
+</style>
+</head>
+<body data-section="customers">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX home"></a>
+    <nav aria-label="Main">
+      <ul class="desktop">
+        <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+        <li class="dd" data-nav-group="platform"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-platform" data-nav="platform">Platform<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-platform"><li class="dd-h">Registro, for programme offices</li><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li class="dd-h">Skynet, for placement offices</li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li class="dd-h">Services</li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+        <li class="dd" data-nav-group="customers"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-customers" data-nav="customers">Customers<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-customers"><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+        <li class="dd" data-nav-group="resources"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-resources" data-nav="resources">Resources<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-resources"><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+        <li class="dd" data-nav-group="company"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-company" data-nav="company">Company<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-company"><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="request-a-demo.html">Request a demo</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+      <li class="m-grp"><p>Platform</p><ul><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+      <li class="m-grp"><p>Customers</p><ul><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+      <li class="m-grp"><p>Resources</p><ul><li><a href="insights.html">Guides and videos</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+      <li class="m-grp"><p>Company</p><ul><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      <li><a href="request-a-demo.html">Request a demo</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+
+<section class="cs-hero" aria-labelledby="h-cs">
+  <div class="wrap">
+    <p class="cs-crumb"><a href="case-studies.html">Case studies</a> &nbsp;/&nbsp; IIM Calcutta, timetabling</p>
+    <div class="cs-hero-grid">
+      <div>
+        <p class="cs-kicker"><img src="assets/logos/iimc.png" alt="">Case study: Registro Timetabling</p>
+        <h1 id="h-cs">IIM Calcutta timetabling: how Registro cut timetable creation time by 70%</h1>
+      </div>
+      <p class="lede">This case study covers timetabling at IIM Calcutta, which replaced manual scheduling with Registro Timetabling, built on demand estimates, a course clash matrix and faculty preferences. Timetables that took weeks now take days.</p>
+    </div>
+    <dl class="cs-inst">
+      <div><dt>Institution</dt><dd>Indian Institute of Management Calcutta</dd></div>
+      <div><dt>Location</dt><dd>Kolkata, West Bengal</dd></div>
+      <div><dt>Solution</dt><dd>Registro Timetabling</dd></div>
+    </dl>
+    <p class="cs-byline">5 minute read<span aria-hidden="true"></span>Last updated November 2026<span aria-hidden="true"></span><button type="button" class="cs-print" onclick="window.print()">Save as PDF</button></p>
+  </div>
+</section>
+
+<div class="cs-banner">
+  <div class="wrap">
+    <figure><img src="assets/case-studies/iimc-wide.jpg" width="2000" height="848" alt="IIM Calcutta campus"></figure>
+  </div>
+</div>
+
+<section class="cs-results" aria-labelledby="h-res">
+  <div class="wrap">
+    <h2 id="h-res" class="vh">Results</h2>
+    <div class="cs-stats n3">
+      <div><b>70%<a class="fn" href="#note-1" aria-label="Note 1">1</a></b><span>less time spent creating timetables: weeks became days</span></div>
+      <div><b>95%<a class="fn" href="#note-2" aria-label="Note 2">2</a></b><span>of potential scheduling conflicts resolved by the system</span></div>
+      <div><b>85%<a class="fn" href="#note-3" aria-label="Note 3">3</a></b><span>of faculty preferences built into the final schedule</span></div>
+    </div>
+
+    <div class="cs-brief" aria-label="In brief">
+      <div><h3>The challenge</h3><p>Weeks of manual scheduling, clashes found after publication, and rooms that did not match demand.</p></div>
+      <div><h3>What EDTEX did</h3><p>Built timetabling on three data sources (demand estimation, a clash matrix and faculty preferences) with a constraint-based optimisation engine.</p></div>
+      <div><h3>The outcome</h3><p>Timetables produced in days, most conflicts resolved before publication, and fewer student complaints about clashes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs-body" aria-label="Case study">
+  <div class="wrap cs-layout">
+
+    <aside class="cs-toc" aria-label="Key facts and contents">
+      <div class="cs-toc-sticky">
+        <nav aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#challenge">What manual scheduling could not sustain</a></li>
+            <li><a href="#pain-points">Where every term fell short</a></li>
+            <li><a href="#solution">How Registro builds the schedule</a></li>
+            <li><a href="#what-changed">Before and after</a></li>
+            <li><a href="#outcomes">What the numbers showed</a></li>
+            <li><a href="#notes">Notes on the figures</a></li>
+          </ol>
+        </nav>
+      </div>
+    </aside>
+
+    <article class="cs-article">
+      <section id="overview" aria-labelledby="h-ov">
+        <h2 id="h-ov">Overview</h2>
+        <p>IIM Calcutta implemented Registro Timetabling to replace a manual process that had become unsustainable as courses and faculty numbers grew. The system is built on demand estimation data, a course clash matrix and faculty preferences. It cut scheduling time by 70%, resolved 95% of potential conflicts and incorporated 85% of faculty preferences into the final timetable.</p>
+        <p>Before automation, the scheduling team placed courses into time slots by hand, trying to balance student demand, clash avoidance, room availability and faculty preferences at once. As complexity grew, this led to conflicts and to students who could not take the courses they wanted because of poor slot allocation.</p>
+        <p class="cs-xlink">More on the product: <a href="product-registro-timetable-automation.html">Registro Timetabling</a>.</p>
+        <p class="cs-xlink">Also at IIM Calcutta: <a href="case-study-iim-calcutta-2-registro-course-bidding-implementation.html">21 elective bidding cycles on Registro since 2017</a>.</p>
+      </section>
+
+      <section id="challenge" aria-labelledby="h-ch">
+        <h2 id="h-ch">What manual scheduling could not sustain</h2>
+        <p>Manual timetabling meant constant back-and-forth between faculty, administration and students, juggling demand predictions, clash avoidance and faculty constraints with no single system. As the number of courses and faculty grew, the result was more conflicts, poorly used classrooms and dissatisfied students.</p>
+        <p>The goals of automation were clear: schedule more efficiently, place courses according to actual demand, prevent clashes and double bookings, include faculty preferences without manual negotiation, and adjust quickly when enrolments or availability change mid-term.</p>
+      </section>
+
+      <section id="pain-points" aria-labelledby="h-pp">
+        <h2 id="h-pp">Where every term fell short</h2>
+        <ul class="cs-issues">
+          <li>Weeks spent placing courses into slots without data on actual demand</li>
+          <li>No clash matrix; course conflicts found only after schedules were published</li>
+          <li>Faculty preferences collected by hand, applied inconsistently and often overridden</li>
+          <li>Popular courses placed in rooms too small for their enrolment</li>
+          <li>Some classrooms overbooked while others stayed empty</li>
+          <li>No way to re-schedule quickly when enrolments or faculty availability changed</li>
+          <li>Growing student dissatisfaction from avoidable timetable conflicts</li>
+        </ul>
+      </section>
+
+      <section id="solution" aria-labelledby="h-so">
+        <h2 id="h-so">How Registro builds the schedule</h2>
+        <p>Registro Timetabling draws on three data sources (demand estimation, the clash matrix and faculty preferences) and a constraint-based optimisation engine that brings them together into a schedule with as few conflicts as possible.</p>
+
+        <figure class="cs-cycle">
+          <figcaption>How a term timetable is built at IIM Calcutta</figcaption>
+          <ol>
+            <li><b>Demand estimation</b><span>Past enrolment predicts course sizes.</span></li>
+            <li><b>Clash matrix</b><span>Courses often taken together are kept apart.</span></li>
+            <li><b>Faculty preferences</b><span>Preferred teaching windows and constraints collected.</span></li>
+            <li><b>Optimisation</b><span>The engine balances clashes, rooms, preferences and slots.</span></li>
+            <li><b>Adjustment</b><span>Changes in enrolment handled without starting again.</span></li>
+          </ol>
+        </figure>
+        <div class="cs-caps">
+          <div><h3>Demand estimation model</h3><p>Historical enrolment data predicts course sizes, so popular courses get suitable rooms at well-attended times.</p></div>
+          <div><h3>Course clash matrix</h3><p>Common course pairings identified so that courses often taken together are never scheduled at the same time.</p></div>
+          <div><h3>Faculty preferences</h3><p>Faculty submit preferred teaching windows and constraints; the system accommodates as many as possible.</p></div>
+          <div><h3>Constraint-based optimisation</h3><p>Balances clash minimisation, room matching, faculty preferences and the spread of time slots.</p></div>
+          <div><h3>Dynamic re-scheduling</h3><p>Quick adjustments when enrolment or faculty availability changes, without starting from scratch.</p></div>
+          <div><h3>Classroom assignment</h3><p>Courses matched to rooms on predicted demand, ending mismatches between class size and capacity.</p></div>
+        </div>
+        <div class="cs-sub"><h3>Lessons learned</h3><p>Data quality was the main implementation challenge. Accurate demand estimates and up-to-date faculty preferences were essential, and early inconsistencies had to be cleaned and verified before the system performed well. Faculty buy-in needed clear communication; once the system showed it could accommodate most preferences, scepticism faded quickly.</p></div>
+
+      </section>
+
+      <section id="what-changed" aria-labelledby="h-wc">
+        <h2 id="h-wc">Before and after</h2>
+        <table class="cs-compare">
+          <caption>Before and after</caption>
+          <thead><tr><th scope="col">Area</th><th scope="col">Before</th><th scope="col">With Registro</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Time to build a timetable</th><td data-label="Before">Weeks</td><td class="after" data-label="With Registro">Days</td></tr>
+            <tr><th scope="row">Course clashes</th><td data-label="Before">Found after schedules were published</td><td class="after" data-label="With Registro">95% of potential conflicts resolved by the system</td></tr>
+            <tr><th scope="row">Faculty preferences</th><td data-label="Before">Collected by hand, often overridden</td><td class="after" data-label="With Registro">85% built into the final schedule</td></tr>
+            <tr><th scope="row">Room allocation</th><td data-label="Before">Popular courses in undersized rooms</td><td class="after" data-label="With Registro">Rooms matched to predicted demand</td></tr>
+            <tr><th scope="row">Mid-term changes</th><td data-label="Before">No quick way to re-schedule</td><td class="after" data-label="With Registro">Adjusted without restarting</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="outcomes" aria-labelledby="h-out">
+        <h2 id="h-out">What the numbers showed</h2>
+        <div class="cs-groups">
+          <div>
+            <h3>For the scheduling team</h3>
+            <ul class="cs-wins">
+              <li>70% less time spent creating timetables</li>
+              <li>95% of potential conflicts resolved by the clash matrix</li>
+              <li>Quick re-scheduling when enrolments change</li>
+            </ul>
+          </div>
+          <div>
+            <h3>For faculty</h3>
+            <ul class="cs-wins">
+              <li>85% of preferences included in the published schedule</li>
+              <li>Preferred teaching windows granted more often</li>
+            </ul>
+          </div>
+          <div>
+            <h3>For students and classrooms</h3>
+            <ul class="cs-wins">
+              <li>A marked fall in complaints about clashes and poor time slots</li>
+              <li>Larger classes placed in suitably sized rooms</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="notes" class="cs-notes" aria-labelledby="h-notes">
+        <h2 id="h-notes">Notes on the figures</h2>
+        <ol>
+          <li id="note-1">Reduction in time spent creating timetables. <span class="todo">Source and comparison period to be added.</span></li>
+          <li id="note-2">Share of potential scheduling conflicts resolved by the system. <span class="todo">Source and comparison period to be added.</span></li>
+          <li id="note-3">Share of faculty preferences incorporated into the final schedule. <span class="todo">Source and comparison period to be added.</span></li>
+        </ol>
+      </section>
+    </article>
+  </div>
+</section>
+
+<section class="cs-more" aria-labelledby="h-more">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="h-more">More case studies</h2>
+      <p>How other institutions implemented EDTEX.</p>
+    </div>
+    <ul class="case-cards" style="grid-template-columns:repeat(3,1fr)">
+      <li><a href="case-study-iim-lucknow-2-registro-course-bidding-multiprogramme-timetabling-automation-academic-erp-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/iiml.jpg" width="900" height="507" alt="IIM Lucknow campus" loading="lazy"></div>
+        <span class="prod">Registro, timetabling</span>
+        <h3 class="inst">IIM Lucknow</h3>
+        <p>Timetable finalisation time halved, with 90%+ of clashes resolved automatically.</p>
+        <span class="go">Read case study</span></a></li>
+      <li><a href="case-study-iim-calcutta-2-registro-course-bidding-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/iimc.jpg" width="900" height="507" alt="IIM Calcutta campus" loading="lazy"></div>
+        <span class="prod">Registro, course bidding and timetabling</span>
+        <h3 class="inst">IIM Calcutta</h3>
+        <p>21 elective bidding cycles for 3,000+ PGP students since 2017.</p>
+        <span class="go">Read case study</span></a></li>
+      <li><a href="case-study-iim-kozhikode-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html">
+        <div class="cc-img"><img src="assets/case-studies/iimk.jpg" width="900" height="507" alt="IIM Kozhikode campus" loading="lazy"></div>
+        <span class="prod">Registro, course bidding and timetabling</span>
+        <h3 class="inst">IIM Kozhikode</h3>
+        <p>Bidding outcomes feed straight into conflict-free timetable generation.</p>
+        <span class="go">Read case study</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="cs-cta" aria-labelledby="h-close">
+  <div class="wrap cs-cta-grid">
+    <div>
+      <h2 id="h-close">See how your timetable would be built</h2>
+      <p>The first call is a 30 to 45 minute discovery session. We map how your timetabling works today, then prepare a demonstration around your own constraints.</p>
+      <ol class="cs-cta-steps">
+        <li><b>Discovery call</b><span>30 to 45 minutes</span></li>
+        <li><b>Tailored demonstration</b><span>Built around your rules</span></li>
+        <li><b>Pilot and deploy</b><span>Scoped, with training</span></li>
+      </ol>
+    </div>
+    <div class="cs-cta-card">
+      <div class="cs-cta-person"><img src="assets/images/arun-portrait.jpg" alt="" width="56" height="56"><p>You will speak with<br><b>Arun Korupolu</b>Co-founder &amp; CRO</p></div>
+      <a class="btn btn-light cs-cta-btn" href="request-a-demo.html">Request a demo</a>
+      <p class="cs-cta-note">We reply within one business day.<br>Prefer email? <a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX"></div>
+        <p>Academic operations software for business schools, law schools and universities. Hyderabad, India.</p>
+        <p style="margin-top:10px"><a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="product-course-bidding.html">Elective course bidding</a></li>
+          <li><a href="product-registro-timetable-automation.html">Timetable automation</a></li>
+          <li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li>
+          <li><a href="product-registro-academic-erp.html">Academic ERP</a></li>
+          <li><a href="product-skynet-placement-automation.html">Placement operations</a></li>
+          <li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li>
+          <li><a href="consulting.html">Consulting and custom AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Customers</h4>
+        <ul>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a href="customer-stories.html">Customer stories</a></li>
+          <li><a href="why-edtex.html">Why EDTEX</a></li>
+          <li><a href="request-a-demo.html">Request a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Guides and videos</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="research-and-development.html">Research and development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="newsroom.html">Newsroom</a></li>
+          <li><a href="request-a-demo.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+          <li><a href="terms-conditions.html">Terms and conditions</a></li>
+          <li><a href="cookie-policy.html">Cookie policy</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-affil affil-strip" aria-label="Affiliations and compliance">
+      <div class="as-row">
+    <div class="as-group">
+      <p class="as-label">Memberships</p>
+      <ul>
+          <li><img src="assets/affiliations/aacsb.png" alt="AACSB Business Education Alliance member" title="AACSB Business Education Alliance member"></li>
+          <li><img src="assets/affiliations/csea.png" alt="Career Services &amp; Employer Alliance" title="Career Services &amp; Employer Alliance"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Supported by</p>
+      <ul>
+          <li><img src="assets/affiliations/dpiit.png" alt="DPIIT-recognised startup, Startup India" title="DPIIT-recognised startup, Startup India"></li>
+          <li><img src="assets/affiliations/microsoft-founders-hub.png" alt="Microsoft for Startups Founders Hub" title="Microsoft for Startups Founders Hub"></li>
+          <li><img src="assets/affiliations/google-startups.png" alt="Google for Startups" title="Google for Startups"></li>
+          <li><img src="assets/affiliations/iprs.png" alt="IPRS, Indian Placement Reporting Standards" title="IPRS, Indian Placement Reporting Standards"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Data protection</p>
+      <ul>
+          <li class="round"><img src="assets/affiliations/dpdp.png" alt="Aligned with India's DPDP Act, 2023" title="Aligned with India's DPDP Act, 2023"></li>
+          <li class="round"><img src="assets/affiliations/gdpr.png" alt="Aligned with EU GDPR" title="Aligned with EU GDPR"></li>
+          <li class="round"><img src="assets/affiliations/soc2.png" alt="AICPA SOC 2" title="AICPA SOC 2"></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 EDTEX. Winspire Educational Solutions Private Limited. CIN U74999TG2016PTC110546.</span>
+      <span>Aligned with India's DPDP Act 2023 and EU GDPR</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.cs-toc nav a'));
+  var secs=links.map(function(l){return document.querySelector(l.getAttribute('href'));}).filter(Boolean);
+  var ticking=false;
+  function sync(){
+    ticking=false;
+    var line=window.innerHeight*0.3, cur=secs[0];
+    secs.forEach(function(sec){if(sec.getBoundingClientRect().top<=line)cur=sec;});
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4){
+      var art=document.querySelector('.cs-article');
+      if(art&&art.getBoundingClientRect().bottom<=window.innerHeight)cur=secs[secs.length-1];
+    }
+    links.forEach(function(l){l.setAttribute('aria-current',l.getAttribute('href')==='#'+(cur&&cur.id)?'true':'false');});
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(sync);}},{passive:true});
+  window.addEventListener('resize',sync);
+  links.forEach(function(l){l.addEventListener('click',function(){setTimeout(sync,600);});});
+  sync();
+})();
+</script>
+</body>
+</html>
