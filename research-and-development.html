@@ -66,7 +66,7 @@
      "name": "What kind of problems does EDTEX research?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "EDTEX researches allocation problems in academic operations: building multi-programme timetables, running elective bidding rounds, slotting Day 0 interviews and placing students with partner universities. Most of these are NP-hard."
+      "text": "Allocation problems in academic operations: multi-programme timetables, elective bidding rounds, Day 0 interview slots and student exchange placements. Most of these are NP-hard."
      }
     },
     {
@@ -74,7 +74,7 @@
      "name": "Which methods does EDTEX use for timetabling?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "EDTEX has developed hybrid optimisation methods that produce conflict-free, preference-aware schedules across thousands of variables, drawing on combinatorial optimisation, constraint programming, integer linear programming and metaheuristics."
+      "text": "Hybrid optimisation methods drawing on combinatorial optimisation, constraint programming, integer linear programming and metaheuristics, producing conflict-free, preference-aware schedules across thousands of variables."
      }
     },
     {
@@ -90,7 +90,15 @@
      "name": "Where is this research used?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It runs inside EDTEX Registro, for course bidding, timetabling and student exchange, and EDTEX Skynet, for placements, at 40+ higher education institutions including IIM Ahmedabad, IIM Bangalore, ISB and IIT Bombay."
+      "text": "Inside EDTEX Registro (course bidding, timetabling and student exchange) and EDTEX Skynet (placements) at 40+ institutions, including IIM Ahmedabad, IIM Bangalore, ISB and IIT Bombay."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can EDTEX take on a problem that is not a standard module?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. EDTEX reviews your current academic or placement processes and builds custom solutions where a standard module is not the right fit. About our consulting"
      }
     }
    ],
@@ -288,6 +296,74 @@
 .pg-ans p + p{margin-top:14px}
 .pg-faq{max-width:820px}
 @media (max-width:700px){.pg-ans{padding-top:48px}.pg-ans p{font-size:1.04rem;padding-left:18px}.vid{margin-top:48px}}
+
+  /* R&D: animated solver illustration */
+  .sv-sec{background:#0B0F19;color:#fff;padding:104px 0;border-top:0}
+  .sv-sec .head h2{color:#fff}
+  .sv-sec .head p{color:rgba(255,255,255,.82)}
+  .sv{display:grid;grid-template-columns:4fr 7fr;gap:56px;align-items:start}
+  .sv-steps{list-style:none;margin:0;padding:0;counter-reset:sv;border-top:1px solid rgba(255,255,255,.18)}
+  .sv-steps li{counter-increment:sv;position:relative;padding:18px 0 18px 46px;border-bottom:1px solid rgba(255,255,255,.1);opacity:.5;transition:opacity .4s}
+  .sv-steps li::before{content:counter(sv);position:absolute;left:0;top:18px;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.9rem;transition:background .4s,border-color .4s,color .4s}
+  .sv-steps li.on{opacity:1}
+  .sv-steps li.on::before{background:var(--accent);border-color:var(--accent);color:#0B0F19}
+  .sv-steps b{display:block;font-weight:600;color:#fff}
+  .sv-steps span{display:block;margin-top:4px;color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.55}
+  .sv-board{margin:0;background:#121826;border:1px solid rgba(255,255,255,.1);padding:22px 22px 16px}
+  .sv-meta{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;margin-bottom:16px;font-size:.92rem;color:rgba(255,255,255,.75)}
+  .sv-meta b{color:#fff;font-variant-numeric:tabular-nums;margin-left:4px}
+  .sv-state{margin-left:auto;font-size:.82rem;font-weight:600;color:#0B0F19;background:var(--accent);border-radius:999px;padding:3px 10px}
+  .sv-state.done{background:#fff}
+  .sv-days{display:grid;grid-template-columns:48px repeat(5,1fr);gap:6px;font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:6px;text-align:center}
+  .sv-body{display:grid;grid-template-columns:48px 1fr;gap:6px}
+  .sv-times{display:grid;grid-template-rows:repeat(4,64px);gap:6px;font-size:.76rem;color:rgba(255,255,255,.55);align-items:center;font-variant-numeric:tabular-nums}
+  .sv-area{position:relative;height:calc(4*64px + 3*6px);background:
+     repeating-linear-gradient(90deg,transparent 0 calc(20% - 6px),#0B0F19 calc(20% - 6px) 20%),
+     repeating-linear-gradient(180deg,rgba(255,255,255,.04) 0 64px,#0B0F19 64px 70px)}
+  .sv-b{position:absolute;width:calc(20% - 6px);height:64px;padding:8px 10px;border-radius:3px;background:#1E2A44;border:1px solid rgba(255,255,255,.14);font-size:.78rem;line-height:1.3;color:#fff;overflow:hidden;
+     transition:left .9s cubic-bezier(.3,.7,.2,1),top .9s cubic-bezier(.3,.7,.2,1),background .4s,border-color .4s,box-shadow .4s}
+  .sv-b b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sv-b small{display:block;color:rgba(255,255,255,.7);font-size:.72rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sv-b.clash{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);background:#3A2A10}
+  .sv-b.clash::after{content:"Clash";position:absolute;right:6px;top:6px;font-size:.66rem;font-weight:600;color:#0B0F19;background:var(--accent);border-radius:2px;padding:0 4px}
+  .sv-b.moving{background:#0046CE;border-color:#0046CE;z-index:3}
+  .sv-b.ok{background:#1E2A44}
+  .sv-board figcaption{margin-top:12px;font-size:.8rem;color:rgba(255,255,255,.55)}
+  @media (max-width:980px){.sv{grid-template-columns:1fr;gap:32px}.sv-sec{padding:80px 0}}
+  @media (max-width:600px){.sv-board{padding:14px 10px}.sv-times{grid-template-rows:repeat(4,58px)}.sv-area{height:calc(4*58px + 3*6px);background:repeating-linear-gradient(90deg,transparent 0 calc(20% - 6px),#0B0F19 calc(20% - 6px) 20%),repeating-linear-gradient(180deg,rgba(255,255,255,.04) 0 58px,#0B0F19 58px 64px)}.sv-b{height:58px;padding:6px}.sv-b small{display:none}.sv-days,.sv-body{grid-template-columns:36px repeat(5,1fr)}.sv-body{grid-template-columns:36px 1fr}.sv-state{margin-left:0}}
+
+  /* R&D trimmed layout */
+  .rd-sec{padding:104px 0}
+  .rd-table{width:100%;border-collapse:collapse;border-top:1px solid var(--ink)}
+  .rd-table thead th{text-align:left;font-size:.92rem;font-weight:600;color:var(--muted);padding:14px 20px 14px 0;border-bottom:1px solid var(--rule)}
+  .rd-table tbody th,.rd-table td{text-align:left;vertical-align:top;padding:22px 20px 22px 0;border-bottom:1px solid var(--rule);line-height:1.55;font-size:.98rem}
+  .rd-table tbody th{width:18%;font-family:var(--serif);font-weight:500;font-size:1.1rem}
+  .rd-table tbody th a{color:var(--ink)}
+  .rd-table td{color:var(--text)}
+  .rd-table td:nth-child(3){color:var(--muted)}
+  .rd-table td ul{list-style:none;margin:0;padding:0}
+  .rd-table td li + li{margin-top:8px}
+  .rd-methods{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+  .rd-methods > div{padding:28px 28px 8px 0}
+  .rd-methods > div + div{padding-left:28px;border-left:1px solid var(--rule)}
+  .rd-methods h3{font-size:1.2rem;margin-bottom:8px}
+  .rd-methods p{color:var(--muted);font-size:1rem;line-height:1.6;margin-bottom:16px}
+  .rd-tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+  .rd-tags li{font-size:.86rem;color:var(--ink);border:1px solid #B8C0CF;border-radius:999px;padding:4px 12px}
+  .rd-ai{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+  .rd-ai h2{margin-bottom:16px}
+  .rd-ai p{color:var(--muted)}
+  .rd-kick{color:var(--accent)!important;font-weight:600;margin-bottom:12px}
+  .rd-logos{grid-template-columns:repeat(9,1fr)}
+  .rd-more{margin-top:14px}
+  @media (max-width:1180px){.rd-logos{grid-template-columns:repeat(5,1fr)}}
+  @media (max-width:980px){
+    .rd-sec{padding:80px 0}
+    .rd-methods,.rd-ai{grid-template-columns:1fr}.rd-methods > div + div{padding-left:0;border-left:0;border-top:1px solid var(--rule)}
+    .rd-table thead{display:none}.rd-table tr{display:block;padding:16px 0;border-bottom:1px solid var(--rule)}
+    .rd-table tbody th,.rd-table td{display:block;width:auto!important;border:0;padding:4px 0}
+    .rd-logos{grid-template-columns:repeat(3,1fr)}
+  }
 </style>
 </head>
 <body data-section="company">
@@ -330,61 +406,72 @@
     </div>
   </div>
 </section>
-<section class="pg-ans" aria-label="Summary">
+
+<section class="pg-ans summary-sec" aria-label="Summary">
   <div class="wrap">
     <p>EDTEX research treats academic operations as an allocation problem. Timetabling, elective bidding, Day 0 interview scheduling and student exchange are NP-hard problems, and EDTEX develops hybrid optimisation methods for them that run inside EDTEX Registro and EDTEX Skynet at 40+ higher education institutions.</p>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="h-approach">
+<section class="sv-sec" id="solver" aria-labelledby="h-solver">
   <div class="wrap">
     <div class="head">
-      <h2 id="h-approach">How does EDTEX approach these problems?</h2>
-      <p>Most of these problems are NP-hard, and we treat them that way. Our team of academic operations consultants, engineers, product owners, designers, customer success managers and data scientists works on them with one aim: better student outcomes and more efficient administration.</p>
+      <h2 id="h-solver">What does an allocation problem look like?</h2>
+      <p>A timetable is a good example. Every class needs a slot, a room and a teacher, no two classes can share any of them, and faculty preferences should be met wherever possible. Watch a solver resolve the clashes. Our consultants and engineers formulate each problem with your office, inside live bidding windows, timetable freezes and placement days, where the real constraints surface.</p>
     </div>
-    <div class="grid2">
-      <div><span class="num">01</span><h3>Research first, then engineering</h3><p>Every module begins as a problem formulation: decision variables, hard constraints and an objective function, before any interface is built.</p></div>
-      <div><span class="num">02</span><h3>Tested against your own history</h3><p>New solvers are benchmarked on your institution's past terms and cycles, so improvement is measured against what your office actually produced, not a synthetic dataset.</p></div>
-      <div><span class="num">03</span><h3>Built with programme offices</h3><p>Consultants, product owners and customer success teams sit inside live cycles: bidding windows, timetable freezes and placement days, where the real constraints surface.</p></div>
-      <div><span class="num">04</span><h3>Proven at institutional scale</h3><p>Deployed at 40+ higher education institutions, including those listed below.</p></div>
+    <div class="sv" id="sv">
+      <ol class="sv-steps" aria-label="How the solver works">
+        <li data-s="0"><b>Formulate the problem</b><span>Decision variables, hard constraints and an objective, before any interface is built.</span></li>
+        <li data-s="1"><b>Find the clashes</b><span>Two classes for one teacher or one room in the same slot break a hard constraint.</span></li>
+        <li data-s="2"><b>Search for a better schedule</b><span>The solver moves classes into free slots, keeping faculty preferences where it can.</span></li>
+        <li data-s="3"><b>Benchmark on your history</b><span>The result is compared with your own past terms before anything goes live.</span></li>
+      </ol>
+      <figure class="sv-board" role="img" aria-label="Illustration: a weekly timetable starts with three clashes; the solver moves classes into free slots until there are zero clashes and most faculty preferences are met.">
+        <div class="sv-meta" aria-hidden="true">
+          <span>Clashes <b id="sv-clash">3</b></span>
+          <span>Faculty preferences met <b id="sv-pref">6 of 10</b></span>
+          <span class="sv-state" id="sv-state">Formulating</span>
+        </div>
+        <div class="sv-grid" aria-hidden="true">
+          <div class="sv-days"><span></span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+          <div class="sv-body">
+            <div class="sv-times"><span>09:00</span><span>10:45</span><span>14:00</span><span>15:45</span></div>
+            <div class="sv-area" id="sv-area"></div>
+          </div>
+        </div>
+        <figcaption>Illustration. Course names and figures are examples.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="h-areas">
+<section class="sec rd-sec" id="problems" aria-labelledby="h-problems">
   <div class="wrap">
-    <div class="head">
-      <h2 id="h-areas">What does EDTEX research?</h2>
-      <p>Five areas where research feeds directly into Registro and Skynet.</p>
-    </div>
-    <div class="areas">
-      <div class="area"><div><span class="lab">Optimisation</span><h3>NP-hard scheduling problems</h3></div><div>
-        <p>We treat timetable generation as a core algorithmic problem, not an administrative chore. Our team has developed hybrid optimisation methods that produce conflict-free, preference-aware schedules across thousands of variables.</p>
-        <ul class="tags"><li>Combinatorial optimisation</li><li>Constraint programming</li><li>Integer linear programming</li><li>Metaheuristics</li></ul>
-        <a class="link" href="product-registro-timetable-automation.html">About Registro timetabling</a></div></div>
-      <div class="area"><div><span class="lab">Registro</span><h3>Academic operations</h3></div><div>
-        <p>From the start of a student's programme to graduation, we automate each operational layer, removing manual bottlenecks and administrative overhead so institutions can focus on teaching.</p>
-        <ul class="tags"><li>Course scheduling</li><li>Course bidding</li><li>Timetabling</li><li>Student exchange</li></ul>
-        <a class="link" href="product-course-bidding.html">About course bidding</a></div></div>
-      <div class="area"><div><span class="lab">Design research</span><h3>User experience</h3></div><div>
-        <p>We study how students, faculty and administrators use academic systems, then design interfaces that reduce friction, build confidence and show the right information at the right moment.</p>
-        <ul class="tags"><li>Behavioural analytics</li><li>Accessibility research</li><li>Cognitive load reduction</li><li>Human-AI interaction</li></ul></div></div>
-      <div class="area"><div><span class="lab">Skynet</span><h3>Placement automation</h3></div><div>
-        <p>End-to-end placement operations, from company outreach to offer management, built to reduce the placement team's workload while improving the experience for recruiters and students.</p>
-        <ul class="tags"><li>Company CRM</li><li>Interview scheduling</li><li>Offer management</li><li>Analytics dashboard</li></ul>
-        <a class="link" href="product-skynet-placement-automation.html">About Skynet</a></div></div>
-      <div class="area"><div><span class="lab">Analytics</span><h3>University analytics and insights</h3></div><div>
-        <p>Data for academic leaders: student outcomes, faculty utilisation, placement metrics and operational efficiency across every process.</p>
-        <ul class="tags"><li>Real-time dashboards</li><li>Custom reports</li><li>Trend analysis</li><li>Export to Excel</li></ul></div></div>
+    <div class="head"><h2 id="h-problems">Which problems does EDTEX solve, and how well?</h2><p>Four allocation problems, what each one allocates, the rules it must never break, and results institutions have measured.</p></div>
+    <table class="rd-table">
+      <thead><tr><th scope="col">Problem</th><th scope="col">What is allocated</th><th scope="col">Hard constraints</th><th scope="col">Proven at</th></tr></thead>
+      <tbody><tr><th scope="row"><a href="product-registro-timetable-automation.html">Timetabling</a></th><td>Classes to time slots, rooms and faculty</td><td>No teacher or room booked twice; room capacity; shared electives across programmes; faculty preferences</td><td><ul><li><a href="case-study-iim-calcutta-registro-course-bidding-multiprogramme-timetabling-automation-implementation.html">IIM Calcutta: 70% less timetable preparation time</a></li><li><a href="case-study-iim-lucknow-2-registro-course-bidding-multiprogramme-timetabling-automation-academic-erp-implementation.html">IIM Lucknow: 90% of clashes resolved automatically</a></li></ul></td></tr><tr><th scope="row"><a href="product-course-bidding.html">Elective course bidding</a></th><td>Elective seats to students, by bid points</td><td>Course capacity; credit rules; prerequisites; timetable clashes; programme quotas in shared electives</td><td><ul><li><a href="case-study-op-jindal-global-university-registro-course-bidding-implementation.html">O.P. Jindal: 5,000+ students in one bidding window</a></li><li><a href="case-study-iim-rohtak-registro-course-bidding-implementation.html">IIM Rohtak: a full bidding cycle in under 60 minutes</a></li></ul></td></tr><tr><th scope="row"><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></th><td>Interview and group-discussion slots to students, panels and companies</td><td>A student can only be in one room at a time; panel availability; company priorities; placement policy</td><td><ul><li><a href="case-study-iit-bombay-skynet-placement-automation-implementation.html">IIT Bombay: 900 students, 40 companies, zero schedule clashes</a></li></ul></td></tr><tr><th scope="row"><a href="product-registro-academic-exchange-automation.html">Student exchange</a></th><td>Partner-university seats to applicants</td><td>Partner quotas and agreements; eligibility; course mapping and credit transfer</td><td><ul><li><a href="product-registro-academic-exchange-automation.html">Registro student exchange</a></li></ul></td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec rd-sec" id="methods" aria-labelledby="h-methods">
+  <div class="wrap">
+    <div class="head"><h2 id="h-methods">Which methods does EDTEX use?</h2><p>Three disciplines work together on every module, from the first formulation to the screen a student sees.</p></div>
+    <div class="rd-methods">
+      <div><h3>Optimisation</h3><p>Hybrid methods that produce conflict-free, preference-aware schedules across thousands of variables.</p><ul class="rd-tags"><li>Combinatorial optimisation</li><li>Constraint programming</li><li>Integer linear programming</li><li>Metaheuristics</li></ul></div>
+      <div><h3>Design research</h3><p>How students, faculty and administrators use academic systems, so interfaces show the right information at the right moment.</p><ul class="rd-tags"><li>Behavioural analytics</li><li>Accessibility</li><li>Cognitive load</li><li>Human-AI interaction</li></ul></div>
+      <div><h3>Analytics</h3><p>Data for academic leaders on student outcomes, faculty utilisation, placement metrics and operational efficiency.</p><ul class="rd-tags"><li>Real-time dashboards</li><li>Custom reports</li><li>Trend analysis</li></ul></div>
     </div>
   </div>
 </section>
 
-<section class="sec" id="ai" aria-labelledby="h-ai">
-  <div class="wrap">
-    <div class="head">
+<section class="sec rd-sec" id="ai" aria-labelledby="h-ai">
+  <div class="wrap rd-ai">
+    <div>
+      <p class="rd-kick">Current work</p>
       <h2 id="h-ai">What are AI answer engines?</h2>
-      <p>A short EDTEX explainer on what AI answer engines are and why they matter for how business schools, law schools and universities are discovered. Building AI answer engines that give decision-makers across the institution timely answers is part of our current work.</p>
+      <p>Answer engines give decision-makers across an institution timely answers, and they also change how business schools, law schools and universities are discovered. Building them is part of our current work.</p>
     </div>
     <div class="vid" id="video" data-youtube="1Ej1yMvSBb8" data-title="What exactly are AI answer engines?" data-date="2026-09-01" data-desc="A short EDTEX explainer on what AI answer engines are and why they matter for how business schools, law schools and universities are discovered.">
       <figure class="vmain">
@@ -400,42 +487,26 @@
   </div>
 </section>
 
-<section class="sec" aria-labelledby="h-dep">
+<section class="sec rd-sec" aria-labelledby="h-dep">
   <div class="wrap">
-    <div class="head">
-      <h2 id="h-dep">Where this work is deployed</h2>
-      <p>Some of the 40+ higher education institutions using EDTEX.</p>
-    </div>
-    <ul class="instlist"><li>IIM Ahmedabad</li><li>IIM Bangalore</li><li>IIM Calcutta</li><li>Indian School of Business</li><li>XLRI Jamshedpur</li><li>SDA Bocconi</li><li>IIT Bombay</li><li>Ashoka University</li><li>SNU Noida</li><li>NLS Bangalore</li><li>IISc Bangalore</li></ul>
+    <div class="head"><h2 id="h-dep">Where does this research run today?</h2><p>Inside EDTEX Registro and EDTEX Skynet at 40+ higher education institutions, including these. <a href="case-studies.html">Read the case studies</a></p></div>
+    <ul class="logos rd-logos"><li><div class="logo-img"><img width="300" height="300" src="assets/logos/iima.png" alt="IIM Ahmedabad" loading="lazy"></div><span class="name">IIM Ahmedabad</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/iimb.png" alt="IIM Bangalore" loading="lazy"></div><span class="name">IIM Bangalore</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/iimc.png" alt="IIM Calcutta" loading="lazy"></div><span class="name">IIM Calcutta</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/isb.png" alt="Indian School of Business" loading="lazy"></div><span class="name">Indian School of Business</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/xlri.png" alt="XLRI Jamshedpur" loading="lazy"></div><span class="name">XLRI Jamshedpur</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/sda-bocconi.png" alt="SDA Bocconi" loading="lazy"></div><span class="name">SDA Bocconi</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/iitb.png" alt="IIT Bombay" loading="lazy"></div><span class="name">IIT Bombay</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/ashoka.png" alt="Ashoka University" loading="lazy"></div><span class="name">Ashoka University</span></li><li><div class="logo-img"><img width="300" height="300" src="assets/logos/nlsiu.png" alt="NLS Bangalore" loading="lazy"></div><span class="name">NLS Bangalore</span></li></ul>
   </div>
 </section>
 
-<section class="sec" aria-labelledby="h-read">
-  <div class="wrap">
-    <div class="head">
-      <h2 id="h-read">Where can I read more?</h2>
-      <p>Guides from the EDTEX blog that go deeper into these problems.</p>
-    </div>
-    <ul class="jobs">
-      <li><a href="blog-how-to-conduct-elective-course-bidding-process-across-multiple-graduate-programmes.html"><h3>How to conduct elective course bidding across multiple graduate programmes</h3><span class="jm"><span>Course bidding</span></span><span class="jgo">Read guide</span></a></li>
-      <li><a href="blog-is-the-university-timetable-automated.html"><h3>What are the benefits of automating university timetable generation?</h3><span class="jm"><span>Timetabling</span></span><span class="jgo">Read guide</span></a></li>
-      <li><a href="blog-skynet-virtual-and-oncampus-placements-automation.html"><h3>Why is real-time tracking on Day 0 and Day 1 so critical?</h3><span class="jm"><span>Placements</span></span><span class="jgo">Read guide</span></a></li>
-    </ul>
-    <p class="cases-foot"><a href="insights.html">All insights and guides</a></p>
-  </div>
-</section>
-
-<section class="sec" id="faq" aria-labelledby="h-faq">
-  <div class="wrap">
-    <div class="head">
+<section class="dm-faq faq-sec" id="faq" aria-labelledby="h-faq">
+  <div class="wrap dm-faq-grid">
+    <div class="faq-head">
       <h2 id="h-faq">Questions about EDTEX research</h2>
-      <p>How the research work connects to the products institutions use.</p>
+      <p>Short answers from our team. Anything else, ask us on the discovery call.</p>
+      <p class="faq-all"><a class="link" href="faqs.html">See all questions</a></p>
     </div>
-    <div class="dm-faq pg-faq">
-      <details class="faq"><summary>What kind of problems does EDTEX research?</summary><div class="faq-a"><p>EDTEX researches allocation problems in academic operations: building multi-programme timetables, running elective bidding rounds, slotting Day 0 interviews and placing students with partner universities. Most of these are NP-hard.</p></div></details>
-      <details class="faq"><summary>Which methods does EDTEX use for timetabling?</summary><div class="faq-a"><p>EDTEX has developed hybrid optimisation methods that produce conflict-free, preference-aware schedules across thousands of variables, drawing on combinatorial optimisation, constraint programming, integer linear programming and metaheuristics.</p></div></details>
+    <div class="faq-list">
+      <details class="faq"><summary>What kind of problems does EDTEX research?</summary><div class="faq-a"><p>Allocation problems in academic operations: multi-programme timetables, elective bidding rounds, Day 0 interview slots and student exchange placements. Most of these are NP-hard.</p></div></details>
+      <details class="faq"><summary>Which methods does EDTEX use for timetabling?</summary><div class="faq-a"><p>Hybrid optimisation methods drawing on combinatorial optimisation, constraint programming, integer linear programming and metaheuristics, producing conflict-free, preference-aware schedules across thousands of variables.</p></div></details>
       <details class="faq"><summary>How does EDTEX test a new solver?</summary><div class="faq-a"><p>New solvers are benchmarked on the institution’s own past terms and cycles, so improvement is measured against what its office actually produced rather than a synthetic dataset.</p></div></details>
-      <details class="faq"><summary>Where is this research used?</summary><div class="faq-a"><p>It runs inside EDTEX Registro, for course bidding, timetabling and student exchange, and EDTEX Skynet, for placements, at 40+ higher education institutions including IIM Ahmedabad, IIM Bangalore, ISB and IIT Bombay.</p></div></details>
+      <details class="faq"><summary>Where is this research used?</summary><div class="faq-a"><p>Inside EDTEX Registro (course bidding, timetabling and student exchange) and EDTEX Skynet (placements) at 40+ institutions, including IIM Ahmedabad, IIM Bangalore, ISB and IIT Bombay.</p></div></details>
+      <details class="faq"><summary>Can EDTEX take on a problem that is not a standard module?</summary><div class="faq-a"><p>Yes. EDTEX reviews your current academic or placement processes and builds custom solutions where a standard module is not the right fit. <a href="consulting.html">About our consulting</a></p></div></details>
     </div>
   </div>
 </section>
@@ -443,7 +514,7 @@
 <section class="cs-cta" aria-labelledby="h-close">
   <div class="wrap cs-cta-grid">
     <div>
-      <h2 id="h-close">Bring us your hardest scheduling problem</h2>
+      <h2 id="h-close">Bring us your hardest allocation problem</h2>
       <p>Course bidding, timetables, placements or student exchange: we start by formulating your problem with your office.</p>
       <ol class="cs-cta-steps">
         <li><b>Discovery call</b><span>30 to 45 minutes</span></li>
@@ -558,6 +629,50 @@
       poster.hidden=true;stage.appendChild(f);f.focus();
     });
   });
+})();
+</script>
+
+<script>
+/* R&D solver illustration: clashes resolved step by step */
+(function(){
+  var root=document.getElementById('sv'); if(!root) return;
+  var area=document.getElementById('sv-area'),steps=[].slice.call(root.querySelectorAll('.sv-steps li'));
+  var clashEl=document.getElementById('sv-clash'),prefEl=document.getElementById('sv-pref'),stateEl=document.getElementById('sv-state');
+  // [name, detail, startCol,startRow, endCol,endRow]
+  var C=[['Strategy','Prof. A · R101',0,0,0,0],['Pricing','Prof. B · R204',1,0,1,0],['Fintech','Prof. C · R07',2,0,2,0],
+         ['Negotiation','Prof. D · R12',0,1,0,1],['Analytics','Prof. E · Lab 2',3,1,3,1],['Leadership','Prof. A · R101',4,2,4,2],
+         ['Valuation','Prof. B · R204',1,0,3,0],   // clash: Prof. B, R204 with Pricing
+         ['Marketing','Prof. F · R07',2,0,2,3],     // clash: room R07 with Fintech
+         ['Operations','Prof. E · R12',3,1,1,2],    // clash: Prof. E with Analytics
+         ['Ethics','Prof. G · R101',4,3,4,3]];
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches,els=[],timers=[],running=false,visible=false;
+  C.forEach(function(c){var d=document.createElement('div');d.className='sv-b';d.innerHTML='<b>'+c[0]+'</b><small>'+c[1]+'</small>';area.appendChild(d);els.push(d);});
+  function place(i,col,row,stack){var d=els[i];d.style.left='calc('+col*20+'% + 0px)';d.style.top='calc('+row+' * (var(--rowh,64px) + 6px) + '+(stack?28:0)+'px)';}
+  function rowh(){var r=area.clientHeight;return (r-18)/4;}
+  function setRow(){area.style.setProperty('--rowh',rowh()+'px');}
+  function step(n){steps.forEach(function(s,i){s.classList.toggle('on',i===n);});}
+  function reset(){C.forEach(function(c,i){place(i,c[2],c[3],i>=6&&i<=8);els[i].className='sv-b';});clashEl.textContent='3';prefEl.textContent='6 of 10';stateEl.textContent='Formulating';stateEl.classList.remove('done');}
+  function final(){C.forEach(function(c,i){place(i,c[4],c[5],false);els[i].className='sv-b ok';});clashEl.textContent='0';prefEl.textContent='9 of 10';stateEl.textContent='Clash-free';stateEl.classList.add('done');step(3);}
+  function at(ms,fn){timers.push(setTimeout(fn,ms));}
+  function cycle(){
+    timers.forEach(clearTimeout);timers=[];reset();step(0);
+    at(1600,function(){step(1);stateEl.textContent='Checking constraints';[6,7,8].forEach(function(i){els[i].classList.add('clash');});[1,2,4].forEach(function(i){els[i].classList.add('clash');});});
+    var t=3600;[6,7,8].forEach(function(i,k){
+      at(t,function(){step(2);stateEl.textContent='Solving';els[i].classList.remove('clash');els[i].classList.add('moving');place(i,C[i][4],C[i][5],false);
+        var partner={6:1,7:2,8:4}[i];els[partner].classList.remove('clash');clashEl.textContent=String(2-k);prefEl.textContent=(7+k)+' of 10';});
+      at(t+1100,function(){els[i].classList.remove('moving');});
+      t+=1700;
+    });
+    at(t+300,function(){step(3);stateEl.textContent='Clash-free';stateEl.classList.add('done');});
+    at(t+4200,function(){if(running)cycle();});
+  }
+  setRow();window.addEventListener('resize',setRow);
+  if(reduce){final();return;}
+  reset();
+  function start(){if(running||!visible||document.hidden)return;running=true;cycle();}
+  function stop(){running=false;timers.forEach(clearTimeout);timers=[];}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){visible=es[0].isIntersecting;visible?start():stop();},{threshold:.3}).observe(root);}else{visible=true;start();}
+  document.addEventListener('visibilitychange',function(){document.hidden?stop():start();});
 })();
 </script>
 </body>

@@ -1309,3 +1309,106 @@ main details.faq.faq > .faq-a p + p{margin-top:12px!important}
 main details.faq.faq > .faq-a > div{padding:0!important;margin:0!important}
 main details.faq.faq > .faq-a ul,main details.faq.faq > .faq-a ol{margin:10px 0 0}
 main details.faq.faq .faq-copy{margin-top:10px}
+/* ===== CONSISTENCY LAYER =====
+   One standard per component. Selectors are prefixed with "body main" so they win over
+   page-level <style> blocks. See DESIGN-GUIDELINES.md. */
+
+/* 1. Section rhythm: every content section 104 / 80 / 64 px, thin rule between sections */
+body main > section.sec, body main > section.rd-sec, body main > section.wy-sec, body main > section.tw-sec,
+body main > section.pp-proof, body main > section.pp-cases, body main > section.cs-more, body main > section.bl-related,
+body main > section.in-more, body main > section.in-roles, body main > section.in-feat, body main > section.hp-prob,
+body main > section.sec-tight, body main > section.faq-sec, body main > section.recs, body main > section.videos,
+body main > section#institutions, body main > section#founder, body main > section#solutions, body main > section#case-studies,
+body main > section.sv-sec{padding:104px 0}
+body main > section.cs-more, body main > section.bl-related, body main > section.in-more, body main > section.faq-sec{border-top:1px solid var(--rule)}
+
+/* 2. Section header: heading left, one short intro right */
+body main .head{display:grid;grid-template-columns:5fr 7fr;gap:24px 64px;align-items:end;margin-bottom:56px}
+body main .head h2{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.022em;margin:0}
+body main .head p{margin:0;color:var(--muted);font-size:1.05rem;line-height:1.65;max-width:56ch}
+body main .sv-sec .head p{color:rgba(255,255,255,.82)}
+
+/* 3. Inner-page heroes share one scale */
+body main .page-hero, body main .in-hero{padding:88px 0 80px}
+body main .page-hero h1, body main .in-hero h1, body main .cs-hero h1{font-size:clamp(2.2rem,4.2vw,3.4rem);line-height:1.08;letter-spacing:-.03em}
+body main .crumb, body main .cs-crumb{font-size:.92rem;margin-bottom:32px}
+
+/* 4. Summary (answer-first) block */
+body main > section.summary-sec{padding:72px 0 0;border-top:0}
+body main > section.summary-sec p{max-width:70ch;margin:0;padding:4px 0 4px 22px;border-left:3px solid var(--accent);font-size:1.15rem;line-height:1.65;color:var(--ink)}
+
+/* 5. FAQ section: one layout everywhere (heading left, questions right, light band) */
+body main > section.faq-sec{background:var(--bg)}
+body main .faq-sec .dm-faq-grid{display:grid;grid-template-columns:4fr 8fr;gap:64px;align-items:start}
+body main .faq-head h2{font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.022em;margin:0 0 16px}
+body main .faq-head p{color:var(--muted);margin:0 0 12px;max-width:40ch}
+body main .faq-head .faq-all{margin-top:8px}
+body main .faq-list{border-top:1px solid var(--ink)}
+/* in-article FAQ lists (guides) use the same item style, no extra borders */
+body main .bl-faq{border-top:1px solid var(--ink);margin-top:8px}
+body main .bl-faq details{border-top:0!important}
+body main .bl-faq summary::after{position:static!important}
+body main details.faq.faq{border-top:0}
+body main .faq-a .bl-ans{display:block}
+
+/* 6. Quotes: three types only */
+body main figure.q-feature{margin:48px 0 0;padding:0;border:0;max-width:860px;background:none}
+body main figure.q-feature blockquote{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.65rem);line-height:1.45;font-weight:400;letter-spacing:-.012em;color:var(--ink);margin:0}
+body main figure.q-card{margin:0;padding:28px;background:#fff;border:1px solid var(--rule);border-radius:2px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+body main figure.q-card blockquote{font-family:var(--serif);font-size:1.08rem;line-height:1.6;font-weight:400;color:var(--ink);margin:0}
+body main figure.q-inline{margin:28px 0 0;padding:2px 0 2px 20px;border-left:3px solid var(--accent)}
+body main figure.q-inline blockquote{font-size:1.05rem;line-height:1.6;color:var(--ink);margin:0}
+body main figure.q-feature figcaption, body main figure.q-card figcaption, body main figure.q-inline figcaption{display:flex;align-items:center;gap:14px;margin-top:18px;font-size:.95rem;line-height:1.45;color:var(--muted)}
+body main figure.q-feature figcaption b, body main figure.q-card figcaption b, body main figure.q-inline figcaption b{display:block;color:var(--ink);font-weight:600}
+body main figure.q-feature .face, body main figure.q-inline .face{width:52px;height:52px}
+body main figure.q-card .face{width:44px;height:44px}
+body main figure.q-feature.endorse{display:grid;grid-template-columns:56px 1fr;gap:20px;align-items:start}
+body main figure.q-feature.endorse .face{width:56px;height:56px}
+body main figure.q-feature.endorse figcaption{margin-top:12px}
+body main .sv-sec figure.q-feature blockquote{color:#fff}
+
+/* 7. Cards: case-study and resource cards share type and spacing */
+body main .case-cards.cc-3{grid-template-columns:repeat(3,1fr)}
+body main .case-cards .inst, body main .in-card h3{font-family:var(--serif);font-weight:500;font-size:1.2rem;line-height:1.35;letter-spacing:-.012em}
+body main .case-cards .prod, body main .in-meta{font-size:.9rem;color:var(--muted)}
+body main .case-cards p, body main .in-card p{font-size:1rem;line-height:1.6;color:var(--muted)}
+body main .case-cards .go, body main .in-go{font-size:.95rem;font-weight:500;color:var(--blue)}
+body main .cc-img, body main .in-img{aspect-ratio:16/9}
+
+/* 8. Links that act as calls to action */
+body main a.link{font-weight:500}
+
+/* 9. Newsletter band on the Resources hub sits light, so the page ends on the standard CTA */
+body main .in-news.in-news-light{background:var(--bg);color:var(--text);border-top:1px solid var(--rule)}
+body main .in-news.in-news-light h2{color:var(--ink)}
+body main .in-news.in-news-light p{color:var(--muted)}
+body main .in-news.in-news-light input[type=email]{background:#fff;color:var(--text);border:1px solid #B8C0CF}
+body main .in-news.in-news-light input[type=email]::placeholder{color:#7A8499}
+body main .in-news.in-news-light button{background:var(--ink);color:#fff}
+body main .in-news.in-news-light button:hover{background:var(--blue)}
+body main .in-news.in-news-light small, body main .in-news.in-news-light small a{color:var(--muted)}
+body main .in-news.in-news-light .ok{color:var(--ink)}
+
+@media (max-width:980px){
+  body main > section.sec, body main > section.rd-sec, body main > section.wy-sec, body main > section.tw-sec,
+  body main > section.pp-proof, body main > section.pp-cases, body main > section.cs-more, body main > section.bl-related,
+  body main > section.in-more, body main > section.in-roles, body main > section.in-feat, body main > section.hp-prob,
+  body main > section.sec-tight, body main > section.faq-sec, body main > section.recs, body main > section.videos,
+  body main > section#institutions, body main > section#founder, body main > section#solutions, body main > section#case-studies,
+  body main > section.sv-sec{padding:80px 0}
+  body main .head{grid-template-columns:1fr;gap:16px;margin-bottom:40px}
+  body main .faq-sec .dm-faq-grid{grid-template-columns:1fr;gap:28px}
+  body main .page-hero, body main .in-hero{padding:72px 0 64px}
+  body main .case-cards.cc-3{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body main > section.sec, body main > section.rd-sec, body main > section.wy-sec, body main > section.tw-sec,
+  body main > section.pp-proof, body main > section.pp-cases, body main > section.cs-more, body main > section.bl-related,
+  body main > section.in-more, body main > section.in-roles, body main > section.in-feat, body main > section.hp-prob,
+  body main > section.sec-tight, body main > section.faq-sec, body main > section.recs, body main > section.videos,
+  body main > section#institutions, body main > section#founder, body main > section#solutions, body main > section#case-studies,
+  body main > section.sv-sec{padding:64px 0}
+  body main > section.summary-sec{padding-top:56px}
+  body main .case-cards.cc-3{grid-template-columns:1fr}
+  body main figure.q-feature.endorse{grid-template-columns:1fr}
+}
