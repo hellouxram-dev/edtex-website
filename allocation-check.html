@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elective allocation self-check | EDTEX</title>
+<meta name="description" content="A two-minute self-check for programme offices: score how fair, fast and auditable your elective allocation is, and see the specific gaps to fix first.">
+<!-- seo:start -->
+<link rel="canonical" href="https://www.edtex.in/allocation-check">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EDTEX">
+<meta property="og:title" content="Elective allocation self-check | EDTEX">
+<meta property="og:description" content="A two-minute self-check for programme offices: score how fair, fast and auditable your elective allocation is, and see the specific gaps to fix first.">
+<meta property="og:url" content="https://www.edtex.in/allocation-check">
+<meta property="og:image" content="https://cdn.prod.website-files.com/69aa86846a304d4dafe43dbd/69d36dc12adc6ed7c6d01086_EDTEX.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Elective allocation self-check | EDTEX">
+<meta name="twitter:description" content="A two-minute self-check for programme offices: score how fair, fast and auditable your elective allocation is, and see the specific gaps to fix first.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://www.edtex.in/allocation-check#webpage",
+   "url": "https://www.edtex.in/allocation-check",
+   "name": "Elective allocation self-check | EDTEX",
+   "description": "A two-minute self-check for programme offices: score how fair, fast and auditable your elective allocation is, and see the specific gaps to fix first.",
+   "isPartOf": {
+    "@id": "https://www.edtex.in/#website"
+   },
+   "publisher": {
+    "@id": "https://www.edtex.in/#organization"
+   },
+   "inLanguage": "en",
+   "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.edtex.in/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How fair and fast is your elective allocation?",
+      "item": "https://www.edtex.in/allocation-check"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Who is the allocation self-check for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Programme office heads, chairs of programme committees and deans responsible for electives at business schools, law schools and universities. It takes about two minutes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the self-check anonymous?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Your answers are scored in your browser and are not sent to EDTEX. If you choose to discuss the result, only what you type into the demo form is shared."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is the score calculated?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Each of the six questions is scored from 0 to 3, giving a total out of 18 shown as a percentage. Any question scored 0 or 1 is listed as a gap, with a guide or case study that addresses it."
+     }
+    }
+   ],
+   "@id": "https://www.edtex.in/allocation-check#faq"
+  }
+ ]
+}
+</script>
+<!-- seo:end -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+
+.ac-grid{display:grid;grid-template-columns:8fr 4fr;gap:72px;align-items:start}
+.ac-progress{height:4px;background:var(--rule);border-radius:2px;overflow:hidden}
+.ac-progress i{display:block;height:100%;width:0;background:var(--accent);transition:width .35s ease}
+.ac-count{font-size:.95rem;color:var(--muted);margin:12px 0 8px}
+.ac-q{border:0;margin:0;padding:32px 0;border-bottom:1px solid var(--rule)}
+.ac-q legend{padding:0;font-family:var(--serif);font-size:1.3rem;line-height:1.35;color:var(--ink);font-weight:500;margin-bottom:18px;float:left;width:100%}
+.ac-q legend + *{clear:both}
+.ac-num{display:block;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--muted);margin-bottom:8px;letter-spacing:.02em}
+.ac-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ac-opt{position:relative;display:block;cursor:pointer}
+.ac-opt input{position:absolute;opacity:0;inset:0}
+.ac-opt span{display:block;height:100%;padding:14px 16px 14px 44px;background:#fff;border:1px solid #CBD2DE;border-radius:3px;font-size:1rem;line-height:1.45;color:var(--text);transition:border-color .15s,background .15s;position:relative}
+.ac-opt span::before{content:"";position:absolute;left:16px;top:17px;width:16px;height:16px;border-radius:50%;border:1.5px solid #8A94A8;background:#fff}
+.ac-opt:hover span{border-color:var(--ink)}
+.ac-opt input:checked + span{border-color:var(--ink);background:#EEF2F9;box-shadow:inset 0 0 0 1px var(--ink)}
+.ac-opt input:checked + span::before{border-color:var(--ink);background:radial-gradient(circle,var(--ink) 0 4px,#fff 5px)}
+.ac-opt input:focus-visible + span{outline:3px solid var(--blue);outline-offset:2px}
+.ac-actions{display:flex;align-items:center;gap:24px;margin-top:36px;flex-wrap:wrap}
+.ac-actions .btn[disabled]{opacity:.45;cursor:not-allowed}
+button.link{background:none;border:0;padding:0;font:inherit;color:var(--blue);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ac-side{position:sticky;top:calc(var(--nav-h,72px) + 32px);background:#fff;border:1px solid var(--rule);padding:28px}
+.ac-side h2{font-size:1.15rem;margin:0 0 16px}
+.ac-side ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.ac-side li{font-size:.97rem;color:var(--muted);line-height:1.5}
+.ac-side li b{display:block;color:var(--ink);font-weight:600}
+.ac-privacy{margin:22px 0 0;padding-top:18px;border-top:1px solid var(--rule);font-size:.92rem;color:var(--muted)}
+.ac-result{background:#fff;border-top:1px solid var(--rule)}
+.ac-score-row{display:grid;grid-template-columns:160px 1fr;gap:48px;align-items:center;max-width:900px}
+.ac-dial{position:relative;width:160px;height:160px}
+.ac-dial svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ac-dial circle{fill:none;stroke-width:9}
+.ac-dial-bg{stroke:var(--rule)}
+.ac-dial-fg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:326.7;transition:stroke-dashoffset 1.1s cubic-bezier(.2,.7,.2,1)}
+.ac-dial b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:500;font-size:2.3rem;color:var(--ink)}
+.ac-band-p{font-size:1.1rem;color:var(--text);max-width:60ch;margin:0}
+.ac-gh{margin:64px 0 8px;font-size:1.3rem}
+.ac-gaps{list-style:none;margin:0;padding:0;counter-reset:g;border-top:1px solid var(--ink)}
+.ac-gaps li{counter-increment:g;display:grid;grid-template-columns:48px 1fr;gap:8px 16px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.ac-gaps li::before{content:counter(g);font-family:var(--serif);font-size:1.4rem;color:var(--accent);grid-row:1/4}
+.ac-gaps h4{margin:0;font-size:1.08rem;color:var(--ink)}
+.ac-gaps p{margin:0;color:var(--muted);max-width:70ch}
+.ac-gaps a{font-weight:500}
+.ac-next{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:40px}
+@media (max-width:980px){.ac-grid{grid-template-columns:1fr;gap:40px}.ac-side{position:static}}
+@media (max-width:600px){.ac-opts{grid-template-columns:1fr}.ac-score-row{grid-template-columns:1fr;gap:24px}.ac-dial{width:130px;height:130px}.ac-next .btn{width:100%;text-align:center}}
+@media print{header,footer,.ac-sec,.faq-sec,.cs-cta,.ac-next,.ea-launch,.ea-panel,.cc-banner{display:none!important}.ac-result{display:block!important;border:0}}
+
+</style>
+</head>
+<body data-section="resources">
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX home"></a>
+    <nav aria-label="Main">
+      <ul class="desktop">
+        <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+        <li class="dd" data-nav-group="platform"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-platform" data-nav="platform">Platform<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-platform"><li class="dd-h">Registro, for programme offices</li><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li class="dd-h">Skynet, for placement offices</li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li class="dd-h">Services</li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+        <li class="dd" data-nav-group="customers"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-customers" data-nav="customers">Customers<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-customers"><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+        <li class="dd" data-nav-group="resources"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-resources" data-nav="resources">Resources<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-resources"><li><a href="insights.html">Guides and videos</a></li><li><a href="allocation-check.html">Allocation self-check</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+        <li class="dd" data-nav-group="company"><button type="button" class="dd-btn" aria-expanded="false" aria-controls="dd-company" data-nav="company">Company<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button><ul class="dd-menu" id="dd-company"><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="request-a-demo.html">Request a demo</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="why-edtex.html" data-nav="why">Why EDTEX</a></li>
+      <li class="m-grp"><p>Platform</p><ul><li><a href="product-course-bidding.html">Elective course bidding</a></li><li><a href="product-registro-timetable-automation.html">Timetable automation</a></li><li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li><li><a href="product-registro-academic-erp.html">Academic ERP</a></li><li><a href="product-skynet-placement-automation.html">Placement operations</a></li><li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li><li><a href="consulting.html">Consulting and custom AI</a></li><li><a href="products.html">All products</a></li></ul></li>
+      <li class="m-grp"><p>Customers</p><ul><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
+      <li class="m-grp"><p>Resources</p><ul><li><a href="insights.html">Guides and videos</a></li><li><a href="allocation-check.html">Allocation self-check</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
+      <li class="m-grp"><p>Company</p><ul><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      <li><a href="request-a-demo.html">Request a demo</a></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero" aria-labelledby="h-ac">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="insights.html">Resources</a> / <span aria-current="page">Allocation self-check</span></nav>
+    <div class="page-hero-grid">
+      <div>
+        <p class="kicker">Self-check · 2 minutes · no sign-up</p>
+        <h1 id="h-ac">How fair and fast is your elective allocation?</h1>
+      </div>
+      <p class="lede">Six questions about how your office runs elective allocation today. You get a score, the specific gaps worth looking at, and what institutions like yours did about them. Your answers stay in your browser.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec ac-sec" aria-label="Self-check questions">
+  <div class="wrap ac-grid">
+    <form class="ac-form" id="ac-form" novalidate>
+      <div class="ac-progress" aria-hidden="true"><i id="ac-bar"></i></div>
+      <p class="ac-count" id="ac-count" aria-live="polite">0 of 6 answered</p>
+      <fieldset class="ac-q" id="q-pref" data-dim="fair">
+  <legend><span class="ac-num">1 of 6</span>How do students state their elective preferences today?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="pref" value="0" data-track="selfcheck_answer"><span>Paper forms or email</span></label><label class="ac-opt"><input type="radio" name="pref" value="1" data-track="selfcheck_answer"><span>An online form with a ranked list</span></label><label class="ac-opt"><input type="radio" name="pref" value="2" data-track="selfcheck_answer"><span>A preference module in our ERP or LMS</span></label><label class="ac-opt"><input type="radio" name="pref" value="3" data-track="selfcheck_answer"><span>Bidding with points or priorities, applied by a system</span></label></div>
+</fieldset>
+<fieldset class="ac-q" id="q-time" data-dim="speed">
+  <legend><span class="ac-num">2 of 6</span>How long from opening the round to publishing final allocations?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="time" value="0" data-track="selfcheck_answer"><span>More than two weeks</span></label><label class="ac-opt"><input type="radio" name="time" value="1" data-track="selfcheck_answer"><span>One to two weeks</span></label><label class="ac-opt"><input type="radio" name="time" value="2" data-track="selfcheck_answer"><span>Two to six days</span></label><label class="ac-opt"><input type="radio" name="time" value="3" data-track="selfcheck_answer"><span>The same day</span></label></div>
+</fieldset>
+<fieldset class="ac-q" id="q-tie" data-dim="fair">
+  <legend><span class="ac-num">3 of 6</span>When two students compete for the last seat, how is it decided?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="tie" value="0" data-track="selfcheck_answer"><span>Staff decide case by case</span></label><label class="ac-opt"><input type="radio" name="tie" value="1" data-track="selfcheck_answer"><span>First come, first served</span></label><label class="ac-opt"><input type="radio" name="tie" value="2" data-track="selfcheck_answer"><span>A written rule, applied by hand</span></label><label class="ac-opt"><input type="radio" name="tie" value="3" data-track="selfcheck_answer"><span>A written rule, applied automatically and logged</span></label></div>
+</fieldset>
+<fieldset class="ac-q" id="q-audit" data-dim="audit">
+  <legend><span class="ac-num">4 of 6</span>If a student appeals, can you show exactly why they got their allocation?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="audit" value="0" data-track="selfcheck_answer"><span>Not really</span></label><label class="ac-opt"><input type="radio" name="audit" value="1" data-track="selfcheck_answer"><span>With effort, from emails and sheets</span></label><label class="ac-opt"><input type="radio" name="audit" value="2" data-track="selfcheck_answer"><span>Partly</span></label><label class="ac-opt"><input type="radio" name="audit" value="3" data-track="selfcheck_answer"><span>Yes, step by step</span></label></div>
+</fieldset>
+<fieldset class="ac-q" id="q-clash" data-dim="clash">
+  <legend><span class="ac-num">5 of 6</span>How are timetable clashes between allocated courses found?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="clash" value="0" data-track="selfcheck_answer"><span>Students report them after publishing</span></label><label class="ac-opt"><input type="radio" name="clash" value="1" data-track="selfcheck_answer"><span>Staff check by hand</span></label><label class="ac-opt"><input type="radio" name="clash" value="2" data-track="selfcheck_answer"><span>Some checks in software</span></label><label class="ac-opt"><input type="radio" name="clash" value="3" data-track="selfcheck_answer"><span>Every student is checked before publishing</span></label></div>
+</fieldset>
+<fieldset class="ac-q" id="q-adddrop" data-dim="after">
+  <legend><span class="ac-num">6 of 6</span>After allocation, how are add/drop and swap requests handled?</legend>
+  <div class="ac-opts"><label class="ac-opt"><input type="radio" name="adddrop" value="0" data-track="selfcheck_answer"><span>Email requests, one by one</span></label><label class="ac-opt"><input type="radio" name="adddrop" value="1" data-track="selfcheck_answer"><span>Tracked in a spreadsheet</span></label><label class="ac-opt"><input type="radio" name="adddrop" value="2" data-track="selfcheck_answer"><span>A second manual round</span></label><label class="ac-opt"><input type="radio" name="adddrop" value="3" data-track="selfcheck_answer"><span>A system round with the same rules</span></label></div>
+</fieldset>
+
+      <div class="ac-actions"><button class="btn" type="submit" id="ac-submit" disabled>See my result</button><button class="link ac-reset" type="reset">Start again</button></div>
+    </form>
+
+    <aside class="ac-side" aria-label="What the check measures">
+      <h2>What it measures</h2>
+      <ul>
+        <li><b>Fairness</b>Whether every student is treated by the same written rule.</li>
+        <li><b>Speed</b>How long the office is tied up by one round.</li>
+        <li><b>Audit trail</b>Whether you can answer an appeal with evidence.</li>
+        <li><b>Clashes</b>Whether students find timetable problems before you do.</li>
+        <li><b>After the round</b>Whether add/drop keeps the same rules.</li>
+      </ul>
+      <p class="ac-privacy">Nothing you select is sent to EDTEX. If you want to discuss the result, you choose what to share.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="sec ac-result" id="result" aria-labelledby="h-res" hidden>
+  <div class="wrap">
+    <div class="ac-score-row">
+      <div class="ac-dial"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="ac-dial-bg"/><circle cx="60" cy="60" r="52" class="ac-dial-fg" id="ac-dial"/></svg><b id="ac-pct">0%</b></div>
+      <div>
+        <p class="kicker" id="ac-band-k">Your result</p>
+        <h2 id="h-res">Result</h2>
+        <p class="ac-band-p" id="ac-band-p"></p>
+      </div>
+    </div>
+    <h3 class="ac-gh" id="ac-gh">Where to look first</h3>
+    <ol class="ac-gaps" id="ac-gaps"></ol>
+    <div class="ac-next">
+      <a class="btn" id="ac-demo" href="request-a-demo.html" data-track="selfcheck_demo">Discuss this result on a call</a>
+      <button class="link" type="button" id="ac-copy" data-track="selfcheck_copy">Copy result to share with colleagues</button>
+      <button class="link" type="button" id="ac-print" data-track="selfcheck_print">Print or save as PDF</button>
+    </div>
+  </div>
+</section>
+
+<section class="dm-faq faq-sec" id="faq" aria-labelledby="h-faq">
+  <div class="wrap dm-faq-grid">
+    <div class="faq-head"><h2 id="h-faq">Questions about the self-check</h2><p>Short answers from our team. Anything else, ask us on the discovery call.</p>
+      <p class="faq-all"><a class="link" href="faqs.html">See all questions</a></p></div>
+    <div class="faq-list">
+      <details class="faq"><summary>Who is the allocation self-check for?</summary><div class="faq-a"><p>Programme office heads, chairs of programme committees and deans responsible for electives at business schools, law schools and universities. It takes about two minutes.</p></div></details>
+      <details class="faq"><summary>Is the self-check anonymous?</summary><div class="faq-a"><p>Yes. Your answers are scored in your browser and are not sent to EDTEX. If you choose to discuss the result, only what you type into the demo form is shared.</p></div></details>
+      <details class="faq"><summary>How is the score calculated?</summary><div class="faq-a"><p>Each of the six questions is scored from 0 to 3, giving a total out of 18 shown as a percentage. Any question scored 0 or 1 is listed as a gap, with a guide or case study that addresses it.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta" aria-labelledby="h-close">
+  <div class="wrap cs-cta-grid">
+    <div>
+      <h2 id="h-close">Want to see your rules run on a real round?</h2>
+      <p>The first call is a 30 to 45 minute discovery session. We map how your office runs the process today, then show you EDTEX configured to your own rules.</p>
+      <ol class="cs-cta-steps">
+        <li><b>Discovery call</b><span>30 to 45 minutes</span></li>
+        <li><b>Tailored demonstration</b><span>Built around your rules</span></li>
+        <li><b>Pilot and deploy</b><span>Scoped, with training</span></li>
+      </ol>
+    </div>
+    <div class="cs-cta-card">
+      <div class="cs-cta-person"><img src="assets/images/arun-portrait.jpg" alt="" width="56" height="56"><p>You will speak with<br><b>Arun Korupolu</b>Co-founder &amp; CRO</p></div>
+      <a class="btn btn-light cs-cta-btn" href="request-a-demo.html">Request a demo</a>
+      <p class="cs-cta-note">We reply within one business day.<br>Prefer email? <a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><img src="assets/images/edtex-logo.png" width="282" height="120" alt="EDTEX"></div>
+        <p>Academic operations software for business schools, law schools and universities. Hyderabad, India.</p>
+        <p style="margin-top:10px"><a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
+      </div>
+      <div>
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="product-course-bidding.html">Elective course bidding</a></li>
+          <li><a href="product-registro-timetable-automation.html">Timetable automation</a></li>
+          <li><a href="product-registro-academic-exchange-automation.html">Student exchange</a></li>
+          <li><a href="product-registro-academic-erp.html">Academic ERP</a></li>
+          <li><a href="product-skynet-placement-automation.html">Placement operations</a></li>
+          <li><a href="product-skynet-scheduler.html">Day 0 interview scheduling</a></li>
+          <li><a href="consulting.html">Consulting and custom AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Customers</h4>
+        <ul>
+          <li><a href="case-studies.html">Case studies</a></li>
+          <li><a href="customer-stories.html">Customer stories</a></li>
+          <li><a href="why-edtex.html">Why EDTEX</a></li>
+          <li><a href="request-a-demo.html">Request a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="insights.html">Guides and videos</a></li>
+          <li><a href="allocation-check.html">Allocation self-check</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="research-and-development.html">Research and development</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about-us.html">About us</a></li>
+          <li><a href="newsroom.html">Newsroom</a></li>
+          <li><a href="request-a-demo.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy policy</a></li>
+          <li><a href="terms-conditions.html">Terms and conditions</a></li>
+          <li><a href="cookie-policy.html">Cookie policy</a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-affil affil-strip" aria-label="Affiliations and compliance">
+      <div class="as-row">
+    <div class="as-group">
+      <p class="as-label">Memberships</p>
+      <ul>
+          <li><img src="assets/affiliations/aacsb.png" alt="AACSB Business Education Alliance member" title="AACSB Business Education Alliance member"></li>
+          <li><img src="assets/affiliations/csea.png" alt="Career Services &amp; Employer Alliance" title="Career Services &amp; Employer Alliance"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Supported by</p>
+      <ul>
+          <li><img src="assets/affiliations/dpiit.png" alt="DPIIT-recognised startup, Startup India" title="DPIIT-recognised startup, Startup India"></li>
+          <li><img src="assets/affiliations/microsoft-founders-hub.png" alt="Microsoft for Startups Founders Hub" title="Microsoft for Startups Founders Hub"></li>
+          <li><img src="assets/affiliations/google-startups.png" alt="Google for Startups" title="Google for Startups"></li>
+          <li><img src="assets/affiliations/iprs.png" alt="IPRS, Indian Placement Reporting Standards" title="IPRS, Indian Placement Reporting Standards"></li>
+      </ul>
+    </div>
+    <div class="as-group">
+      <p class="as-label">Data protection</p>
+      <ul>
+          <li class="round"><img src="assets/affiliations/dpdp.png" alt="Aligned with India's DPDP Act, 2023" title="Aligned with India's DPDP Act, 2023"></li>
+          <li class="round"><img src="assets/affiliations/gdpr.png" alt="Aligned with EU GDPR" title="Aligned with EU GDPR"></li>
+          <li class="round"><img src="assets/affiliations/soc2.png" alt="AICPA SOC 2" title="AICPA SOC 2"></li>
+      </ul>
+    </div>
+  </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 EDTEX. Winspire Educational Solutions Private Limited. CIN U74999TG2016PTC110546.</span>
+      <span>Aligned with India's DPDP Act 2023 and EU GDPR</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+<script>
+(function(){
+var GAPS={"pref": {"q": "How do students state their elective preferences today?", "gap": "Preferences collected as a ranked list or email cannot show how strongly a student wants a course. Bidding with points lets demand speak clearly and gives you a defensible basis for every seat.", "href": "/blogs/what-is-elective-course-bidding", "label": "What is elective course bidding?"}, "time": {"q": "How long from opening the round to publishing final allocations?", "gap": "Long rounds usually mean manual clean-up between steps. A system that applies your rules as bids close can publish results within the hour; IIM Rohtak runs its rounds in under 60 minutes.", "href": "/case-studies/iim-rohtak-registro-course-bidding-implementation", "label": "How IIM Rohtak runs a round in under 60 minutes"}, "tie": {"q": "When two students compete for the last seat, how is it decided?", "gap": "Tie-breaks decided by hand or by speed of clicking are the most common source of complaints. Write the rule into your bidding policy and let the system apply it the same way for everyone.", "href": "/blogs/establishing-an-elective-course-bidding-policy-in-business-and-law-schools", "label": "Writing an elective bidding policy"}, "audit": {"q": "If a student appeals, can you show exactly why they got their allocation?", "gap": "An appeal is only as easy as your records. When every bid, rule and allocation step is logged, the programme office can answer a student or a faculty committee in minutes.", "href": "/products/course-bidding", "label": "How Registro records every allocation step"}, "clash": {"q": "How are timetable clashes between allocated courses found?", "gap": "Clashes found after publishing force a second round of swaps. A solver that checks every student, faculty member and room before release removes that round entirely.", "href": "/products/registro-timetable-automation", "label": "Clash-free timetabling with Registro"}, "adddrop": {"q": "After allocation, how are add/drop and swap requests handled?", "gap": "Add/drop handled by email quietly undoes the fairness of the main round. Running it as a short system round with the same rules keeps seats and records consistent.", "href": "/blogs/how-to-succeed-100-in-your-elective-course-bidding-round-process", "label": "Running a clean bidding round, end to end"}};
+var BANDS=[[0,40,"Manual and exposed","Most of the round depends on staff judgement and manual steps. That is workable at small scale, but it makes appeals hard to answer and ties the office up for weeks."],
+[40,70,"Partly systemised","Some steps are in software, but the rules still live with people. The gaps below are where most student complaints and extra staff days usually come from."],
+[70,90,"Well run, with gaps","Your process is in good shape. Closing the remaining gaps below would make every allocation fully traceable and shorten the round further."],
+[90,101,"Mature","Your allocation is rule-based, fast and auditable. Institutions at this level usually look next at timetable optimisation and multi-programme rounds."]];
+var f=document.getElementById('ac-form'),qs=[].slice.call(f.querySelectorAll('.ac-q')),bar=document.getElementById('ac-bar'),cnt=document.getElementById('ac-count'),sub=document.getElementById('ac-submit'),res=document.getElementById('result');
+function answered(){return qs.filter(function(q){return q.querySelector('input:checked');}).length;}
+function upd(){var n=answered();bar.style.width=(n/qs.length*100)+'%';cnt.textContent=n+' of '+qs.length+' answered';sub.disabled=n<qs.length;}
+f.addEventListener('change',function(e){upd();var q=e.target.closest('.ac-q'),i=qs.indexOf(q);if(i>=0&&i<qs.length-1&&!qs[i+1].querySelector('input:checked')&&window.innerWidth>600){setTimeout(function(){qs[i+1].scrollIntoView({behavior:'smooth',block:'center'});},180);}
+  if(answered()===1&&window.edtexTrack)edtexTrack('selfcheck_start');});
+f.addEventListener('reset',function(){setTimeout(function(){upd();res.hidden=true;},0);});
+var summary='';
+f.addEventListener('submit',function(e){e.preventDefault();if(answered()<qs.length)return;
+  var total=0,gaps=[];qs.forEach(function(q){var inp=q.querySelector('input:checked'),v=+inp.value,k=inp.name;total+=v;if(v<=1)gaps.push(k);});
+  var pct=Math.round(total/(qs.length*3)*100),b=BANDS.filter(function(x){return pct>=x[0]&&pct<x[1];})[0];
+  if(!gaps.length){qs.forEach(function(q){var inp=q.querySelector('input:checked');if(+inp.value===2)gaps.push(inp.name);});}
+  document.getElementById('ac-pct').textContent=pct+'%';document.getElementById('h-res').textContent=b[2];document.getElementById('ac-band-p').textContent=b[3];
+  document.getElementById('ac-gh').textContent=gaps.length?'Where to look first':'Nothing major to fix';
+  var ol=document.getElementById('ac-gaps');ol.innerHTML='';
+  gaps.forEach(function(k){var g=GAPS[k],li=document.createElement('li');li.innerHTML='<h4></h4><p></p><a class="link"></a>';li.querySelector('h4').textContent=g.q;li.querySelector('p').textContent=g.gap;var a=li.querySelector('a');a.textContent=g.label;a.href=(window.edtexHref||String)(g.href);ol.appendChild(li);});
+  res.hidden=false;var d=document.getElementById('ac-dial');d.style.strokeDashoffset=326.7;requestAnimationFrame(function(){requestAnimationFrame(function(){d.style.strokeDashoffset=326.7*(1-pct/100);});});
+  res.scrollIntoView({behavior:'smooth',block:'start'});
+  summary='EDTEX allocation self-check: '+pct+'% ('+b[2]+'). Gaps: '+(gaps.map(function(k){return GAPS[k].q;}).join(' | ')||'none');
+  var demo=document.getElementById('ac-demo'),base=demo.getAttribute('href').split('?')[0];
+  demo.href=base+'?interest=course-bidding,process-review&src=selfcheck&msg='+encodeURIComponent('Self-check result '+pct+'% ('+b[2]+'). We would like to discuss: '+(gaps.map(function(k){return GAPS[k].q;}).join('; ')||'next steps'));
+  if(window.edtexTrack)edtexTrack('selfcheck_complete',{score:pct,band:b[2],gaps:gaps.join(',')});
+});
+document.getElementById('ac-copy').addEventListener('click',function(){var t=this;(navigator.clipboard?navigator.clipboard.writeText(summary+' — '+location.href):Promise.reject()).then(function(){t.textContent='Copied';setTimeout(function(){t.textContent='Copy result to share with colleagues';},2000);},function(){prompt('Copy this result:',summary);});});
+document.getElementById('ac-print').addEventListener('click',function(){window.print();});
+upd();
+})();
+</script>
+</body>
+</html>

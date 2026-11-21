@@ -91,3 +91,31 @@
     if(d&&d.matches('details.faq')){d.open=true;d.classList.add('flash');setTimeout(function(){d.classList.remove('flash');},2000);setTimeout(function(){d.scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'});},80);}}
   fromHash();window.addEventListener('hashchange',fromHash);
 })();
+
+/* Nov 2026: link helper, hero motion, demo-form prefill, analytics + assistant loaders */
+(function(){
+  /* Root links (/case-studies/x) become flat files (case-study-x.html) in the static build. */
+  var flat=!!document.querySelector('a[href="faqs.html"],a[href="index.html"]');
+  window.edtexHref=function(p){if(!flat||!p||p.charAt(0)!=='/'||p.charAt(1)==='/')return p;
+    var m=p.match(/^([^?#]*)(\?[^#]*)?(#.*)?$/),path=m[1].replace(/\/$/,''),q=m[2]||'',h=m[3]||'';
+    var parts=path.replace(/^\//,'').split('/'),pre={'case-studies':'case-study-','blogs':'blog-','videos':'video-','products':'product-'},f;
+    if(!parts[0])f='index.html';else if(parts.length===2)f=(parts.join('/')==='solutions/consulting')?'consulting.html':(pre[parts[0]]||parts[0]+'-')+parts[1]+'.html';else f=parts[0]+'.html';
+    return f+q+h;};
+
+  /* demo form: prefill from ?name=&institution=&email=&interest=a,b&msg= (assistant and self-check) */
+  var form=document.getElementById('dm-form');
+  if(form&&location.search){var q=new URLSearchParams(location.search);
+    [['name','f-name'],['institution','f-inst'],['email','f-email'],['msg','f-msg']].forEach(function(x){var v=q.get(x[0]),el=document.getElementById(x[1]);if(v&&el&&!el.value)el.value=v.slice(0,800);});
+    (q.get('interest')||'').split(',').forEach(function(k){var el=k&&form.querySelector('input[type=checkbox][name="'+k.replace(/[^a-z0-9-]/g,'')+'"]');if(el)el.checked=true;});
+  }
+
+  /* footer: cookie settings link */
+  var cp=document.querySelector('footer a[href$="cookie-policy"],footer a[href$="cookie-policy.html"]');
+  if(cp&&cp.parentNode&&cp.parentNode.tagName==='LI'){var li=document.createElement('li'),cb=document.createElement('button');cb.type='button';cb.className='ft-cookie';cb.textContent='Cookie settings';cb.addEventListener('click',function(){if(window.edtexCookieSettings)edtexCookieSettings();});li.appendChild(cb);cp.parentNode.parentNode.insertBefore(li,cp.parentNode.nextSibling);}
+
+  /* load analytics first, then the assistant */
+  var me=document.querySelector('script[src*="js/site.js"]'),base=me?me.getAttribute('src').replace(/js\/site\.js.*$/,''):'';
+  function load(src,cb){var s=document.createElement('script');s.src=base+src;s.defer=true;if(cb)s.onload=cb;document.body.appendChild(s);}
+  load('js/motion.js');
+  load('js/analytics.js',function(){load('js/assistant-data.js',function(){load('js/assistant.js');});});
+})();

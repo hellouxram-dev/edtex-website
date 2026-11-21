@@ -47,3 +47,10 @@ Always name the person, role and institution. No unattributed quotes.
 ## Writing
 - Plain, specific, verifiable. Numbers only with a named source (institution and year).
 - No marketing superlatives; deans and professors should be able to check every claim.
+
+## Motion
+- Use motion only where it explains something faster than text: a process, a change over time, or a before/after. Never for decoration.
+- Shared script: `js/motion.js`. Add `data-motion` to reveal once on scroll, `data-loop` for illustrations that loop only while visible, `.mc[data-to]` for count-up numbers, `data-sim="tt|d0|bid"` for the scripted product illustrations. Process lists (`ol.pp-steps`, `ol.wy-steps`) play step by step automatically.
+- Illustrations of the product are always labelled "Illustration" and use made-up names. Real figures appear only in proof lines with the institution named.
+- Keep the full text available behind "Read the detail" or "Read the full timeline" so nothing is lost for readers or search engines.
+- Everything respects the visitor's "reduce motion" setting and shows its final state instead.

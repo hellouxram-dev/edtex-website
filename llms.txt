@@ -13,6 +13,7 @@ Key facts:
 - [The academic operations partner to India's leading business schools](https://www.edtex.in/): EDTEX Registro and Skynet automate course bidding, timetabling, student exchange, academic records and placements for 40+ business schools and universities.
 - [When electives, timetables and placements outgrow spreadsheets and email](https://www.edtex.in/why-edtex): The problems deans, programme offices and placement chairs bring to EDTEX, what changes with Registro and Skynet, and how 40+ institutions put them to work.
 - [Two platforms for the offices that run the academic year](https://www.edtex.in/products): EDTEX Registro runs course bidding, timetabling, exchange and the academic ERP; EDTEX Skynet runs placements and Day 0 scheduling. Used by 40+ institutions.
+- [Elective allocation self-check](https://www.edtex.in/allocation-check): A six-question self-assessment for programme offices that scores how fair, fast and auditable elective allocation is, and links each gap to a guide or case study.
 - [Questions institutions ask us](https://www.edtex.in/faqs): Answers to common questions about EDTEX Registro and Skynet: timetable automation, course bidding, placement automation, academic ERP and student exchange.
 
 ## Products
