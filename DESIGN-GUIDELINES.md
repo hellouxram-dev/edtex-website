@@ -54,3 +54,10 @@ Always name the person, role and institution. No unattributed quotes.
 - Illustrations of the product are always labelled "Illustration" and use made-up names. Real figures appear only in proof lines with the institution named.
 - Keep the full text available behind "Read the detail" or "Read the full timeline" so nothing is lost for readers or search engines.
 - Everything respects the visitor's "reduce motion" setting and shows its final state instead.
+
+## Accessibility rules (from the Nov 2026 audit)
+- Colour: navy #0E1E3C, brand blue #0046CE, amber #E0A030 on #F5F7FA or white. No other hues, except #B42318 for form errors.
+- Reading text at least 14.5px (0.85rem); labels at least 13.6px (0.8rem). Muted text #4A5468 or darker on light; at least 80% white on dark.
+- One `h1` per page; headings never skip a level (footer titles are `h2`).
+- Focus ring: blue on light backgrounds, amber on dark ones.
+- Only one looping animation visible at a time. Nothing pops up within 20 seconds of arriving, and never two notices at once.

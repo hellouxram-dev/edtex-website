@@ -325,7 +325,7 @@
   .sv-state.done{background:#fff}
   .sv-days{display:grid;grid-template-columns:48px repeat(5,1fr);gap:6px;font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:6px;text-align:center}
   .sv-body{display:grid;grid-template-columns:48px 1fr;gap:6px}
-  .sv-times{display:grid;grid-template-rows:repeat(4,64px);gap:6px;font-size:.76rem;color:rgba(255,255,255,.55);align-items:center;font-variant-numeric:tabular-nums}
+  .sv-times{display:grid;grid-template-rows:repeat(4,64px);gap:6px;font-size:.8rem;color:rgba(255,255,255,.8);align-items:center;font-variant-numeric:tabular-nums}
   .sv-area{position:relative;height:calc(4*64px + 3*6px);background:
      repeating-linear-gradient(90deg,transparent 0 calc(20% - 6px),#0B0F19 calc(20% - 6px) 20%),
      repeating-linear-gradient(180deg,rgba(255,255,255,.04) 0 64px,#0B0F19 64px 70px)}
@@ -337,7 +337,7 @@
   .sv-b.clash::after{content:"Clash";position:absolute;right:6px;top:6px;font-size:.66rem;font-weight:600;color:#0B0F19;background:var(--accent);border-radius:2px;padding:0 4px}
   .sv-b.moving{background:#0046CE;border-color:#0046CE;z-index:3}
   .sv-b.ok{background:#1E2A44}
-  .sv-board figcaption{margin-top:12px;font-size:.8rem;color:rgba(255,255,255,.55)}
+  .sv-board figcaption{margin-top:12px;font-size:.88rem;color:rgba(255,255,255,.82)}
   @media (max-width:980px){.sv{grid-template-columns:1fr;gap:32px}.sv-sec{padding:80px 0}}
   @media (max-width:600px){.sv-board{padding:14px 10px}.sv-times{grid-template-rows:repeat(4,58px)}.sv-area{height:calc(4*58px + 3*6px);background:repeating-linear-gradient(90deg,transparent 0 calc(20% - 6px),#0B0F19 calc(20% - 6px) 20%),repeating-linear-gradient(180deg,rgba(255,255,255,.04) 0 58px,#0B0F19 58px 64px)}.sv-b{height:58px;padding:6px}.sv-b small{display:none}.sv-days,.sv-body{grid-template-columns:36px repeat(5,1fr)}.sv-body{grid-template-columns:36px 1fr}.sv-state{margin-left:0}}
 
@@ -390,6 +390,7 @@
       </ul>
     </nav>
     <div class="nav-cta">
+      <a class="nav-signin" href="login.html">Sign in</a>
       <a class="btn" href="request-a-demo.html">Request a demo</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
     </div>
@@ -401,6 +402,7 @@
       <li class="m-grp"><p>Customers</p><ul><li><a href="case-studies.html">Case studies</a></li><li><a href="customer-stories.html">Customer stories</a></li></ul></li>
       <li class="m-grp"><p>Resources</p><ul><li><a href="insights.html">Guides and videos</a></li><li><a href="allocation-check.html">Allocation self-check</a></li><li><a href="faqs.html">FAQs</a></li></ul></li>
       <li class="m-grp"><p>Company</p><ul><li><a href="about-us.html">About us</a></li><li><a href="research-and-development.html">Research and development</a></li><li><a href="newsroom.html">Newsroom</a></li></ul></li>
+      <li><a href="login.html">Sign in to your portal</a></li>
       <li><a href="request-a-demo.html">Request a demo</a></li>
     </ul>
   </div>
@@ -548,7 +550,7 @@
         <p style="margin-top:10px"><a href="mailto:connect@edtex.in">connect@edtex.in</a></p>
       </div>
       <div>
-        <h4>Platform</h4>
+        <h2 class="ft-h">Platform</h2>
         <ul>
           <li><a href="product-course-bidding.html">Elective course bidding</a></li>
           <li><a href="product-registro-timetable-automation.html">Timetable automation</a></li>
@@ -560,7 +562,7 @@
         </ul>
       </div>
       <div>
-        <h4>Customers</h4>
+        <h2 class="ft-h">Customers</h2>
         <ul>
           <li><a href="case-studies.html">Case studies</a></li>
           <li><a href="customer-stories.html">Customer stories</a></li>
@@ -569,7 +571,7 @@
         </ul>
       </div>
       <div>
-        <h4>Resources</h4>
+        <h2 class="ft-h">Resources</h2>
         <ul>
           <li><a href="insights.html">Guides and videos</a></li>
           <li><a href="allocation-check.html">Allocation self-check</a></li>
@@ -578,7 +580,7 @@
         </ul>
       </div>
       <div>
-        <h4>Company</h4>
+        <h2 class="ft-h">Company</h2>
         <ul>
           <li><a href="about-us.html">About us</a></li>
           <li><a href="newsroom.html">Newsroom</a></li>

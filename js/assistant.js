@@ -119,9 +119,9 @@
   window.edtexOpenAssistant=open;
 
   /* page-aware greeting, once per visit, after the visitor has had time to read */
-  if(!ss('ea-teased')&&!/request-a-demo/.test(p)){
-    var shown=false;function tease(){if(shown||!P.hidden)return;shown=true;TS.querySelector('p').textContent=greet;TS.hidden=false;ss('ea-teased','1');T('assistant_teaser_shown',{page:location.pathname});}
-    setTimeout(tease,12000);
+  if(!ss('ea-teased')&&!/request-a-demo|allocation-check/.test(p)&&window.matchMedia('(min-width: 900px)').matches){
+    var shown=false;function tease(){if(shown||!P.hidden||document.querySelector('.cc-banner'))return;shown=true;TS.querySelector('p').textContent=greet;TS.hidden=false;ss('ea-teased','1');T('assistant_teaser_shown',{page:location.pathname});}
+    setTimeout(tease,20000);
     window.addEventListener('scroll',function s(){if(window.scrollY>window.innerHeight*1.2){setTimeout(tease,1500);window.removeEventListener('scroll',s);}},{passive:true});
   }
   TS.querySelector('.ea-tx').addEventListener('click',function(){TS.hidden=true;T('assistant_teaser_dismissed');});

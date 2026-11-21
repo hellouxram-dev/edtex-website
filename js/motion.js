@@ -69,7 +69,18 @@
   function onIn(el){el.classList.add('in');$$('.mc[data-to]',el).forEach(count);if(el.classList.contains('mc'))count(el);if(el.classList.contains('jr'))setTimeout(function(){var pl=el.querySelector('.jr-line polyline');if(pl)pl.style.strokeDashoffset=0;},50);}
   var targets=$$('[data-motion]');
   if(RM||!('IntersectionObserver' in window)){targets.forEach(function(el){el.classList.add('in');});$$('.jr-line polyline').forEach(function(p){p.style.strokeDashoffset=0;});}
-  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);onIn(e.target);}});},{threshold:.25,rootMargin:'0px 0px -8% 0px'});targets.forEach(function(el){io.observe(el);});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);onIn(e.target);}});},{threshold:0,rootMargin:'0px 0px -12% 0px'});targets.forEach(function(el){io.observe(el);});}
+  /* Home problem tiles: play one at a time (calmer than six loops at once); hover or focus plays that tile */
+  var tiles=$$('.pm-art');
+  tiles.forEach(function(t){t.removeAttribute('data-loop');});
+  if(tiles.length&&!RM){var ti=0,tt=null,vis=false,hold=false;
+    function spot(i){tiles.forEach(function(t,j){t.classList.toggle('play',j===i);});}
+    function next(){if(!vis||hold)return;spot(ti);ti=(ti+1)%tiles.length;tt=setTimeout(next,7000);}
+    var grid=tiles[0].closest('.pm-grid');
+    if('IntersectionObserver' in window&&grid){new IntersectionObserver(function(es){es.forEach(function(e){vis=e.isIntersecting;clearTimeout(tt);if(vis)next();else spot(-1);});},{threshold:.2}).observe(grid);}
+    tiles.forEach(function(t,j){var li=t.closest('.pm');['mouseenter','focusin'].forEach(function(ev){li.addEventListener(ev,function(){hold=true;clearTimeout(tt);spot(j);ti=(j+1)%tiles.length;});});
+      ['mouseleave','focusout'].forEach(function(ev){li.addEventListener(ev,function(){hold=false;clearTimeout(tt);tt=setTimeout(next,4000);});});});
+  }
   var loops=$$('[data-loop]');
   if(!RM&&'IntersectionObserver' in window){var lo=new IntersectionObserver(function(es){es.forEach(function(e){var el=e.target;if(e.isIntersecting){if(!el.classList.contains('play')){el.classList.add('play');if(el._sim)el._sim.start();}}else{el.classList.remove('play');if(el._sim)el._sim.stop();}});},{threshold:.2});loops.forEach(function(el){lo.observe(el);});}
   else loops.forEach(function(el){el.classList.add('play');});
