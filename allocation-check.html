@@ -401,7 +401,7 @@ f.addEventListener('submit',function(e){e.preventDefault();if(answered()<qs.leng
   document.getElementById('ac-pct').textContent=pct+'%';document.getElementById('h-res').textContent=b[2];document.getElementById('ac-band-p').textContent=b[3];
   document.getElementById('ac-gh').textContent=gaps.length?'Where to look first':'Nothing major to fix';
   var ol=document.getElementById('ac-gaps');ol.innerHTML='';
-  gaps.forEach(function(k){var g=GAPS[k],li=document.createElement('li');li.innerHTML='<h2 class="ft-h"></h2><p></p><a class="link"></a>';li.querySelector('h4').textContent=g.q;li.querySelector('p').textContent=g.gap;var a=li.querySelector('a');a.textContent=g.label;a.href=(window.edtexHref||String)(g.href);ol.appendChild(li);});
+  gaps.forEach(function(k){var g=GAPS[k],li=document.createElement('li');li.innerHTML='<h4></h4><p></p><a class="link"></a>';li.querySelector('h4').textContent=g.q;li.querySelector('p').textContent=g.gap;var a=li.querySelector('a');a.textContent=g.label;a.href=(window.edtexHref||String)(g.href);ol.appendChild(li);});
   res.hidden=false;var d=document.getElementById('ac-dial');d.style.strokeDashoffset=326.7;requestAnimationFrame(function(){requestAnimationFrame(function(){d.style.strokeDashoffset=326.7*(1-pct/100);});});
   res.scrollIntoView({behavior:'smooth',block:'start'});
   summary='EDTEX allocation self-check: '+pct+'% ('+b[2]+'). Gaps: '+(gaps.map(function(k){return GAPS[k].q;}).join(' | ')||'none');
