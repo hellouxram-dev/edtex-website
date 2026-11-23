@@ -1810,3 +1810,10 @@ ol.mflow.in > li::before{background:var(--ink)!important;color:#fff!important;bo
   .ea-launch .ea-dot{position:absolute;top:10px;right:10px;width:8px;height:8px}
   .ea{left:auto}
 }
+
+/* Homepage hero: navy background (Nov 2026) */
+.hx{background:#0E1E3C}
+.hx-gallery figure{background:#16284D}
+.hx-gallery figcaption{background:linear-gradient(0deg,rgba(14,30,60,.85),rgba(14,30,60,0))}
+.hx-facts{border-top-color:rgba(255,255,255,.22)}
+.ea-launch{box-shadow:0 0 0 1px rgba(255,255,255,.28),0 14px 32px -12px rgba(14,30,60,.55)}
